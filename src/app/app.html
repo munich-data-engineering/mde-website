@@ -1,0 +1,181 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-grid">
+    <!-- Left card: text -->
+    <div class="hero-text-card mdc-elevation-2">
+      <div class="hero-content">
+        <h1 class="hero-title">{{ title() }}</h1>
+        <p class="hero-subtitle">
+          We build data-driven software.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="hero-btn hero-btn-primary">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right card: image -->
+    <!-- Image style: contemporary graphic illustration with strong influences from Memphis design, pop art, and digital collage aesthetics -->
+    <div class="hero-image-card mdc-elevation-3">
+      <img
+        src="/img/munich_skyline.png"
+        alt="Munich skyline at sunset"
+        class="hero-image"
+      />
+    </div>
+  </div>
+
+<!-- Core Competencies Section -->
+<section class="competencies-section">
+  <div class="competencies-content">
+    <p class="competencies-intro">We combine software engineering, machine learning and cloud computing to build fast, reliable and maintainable machine learning pipelines and data-driven software.</p>
+
+    <div class="competencies-grid">
+      <div class="competency-card mdc-elevation-1">
+        <mat-icon class="competency-icon">code</mat-icon>
+        <h3 class="competency-title">Software Engineering</h3>
+        <p class="competency-desc">Code Quality is Our Priority — we adhere to industry best practices, including Clean Code principles and CI/CD workflows. Our strong theoretical foundation as well as our reliance on empirical research on code quality enables us to consistently deliver exceptional code.</p>
+      </div>
+
+      <div class="competency-card mdc-elevation-1">
+        <mat-icon class="competency-icon">psychology</mat-icon>
+        <h3 class="competency-title">Machine Learning</h3>
+        <p class="competency-desc">From predictive models to intelligent automation, we design and deploy ML systems that scale. Our expertise spans deep learning, NLP, and recommendation systems — turning complex data into actionable insights.</p>
+      </div>
+
+      <div class="competency-card mdc-elevation-1">
+        <mat-icon class="competency-icon">cloud</mat-icon>
+        <h3 class="competency-title">Cloud Computing</h3>
+        <p class="competency-desc">We architect resilient, cloud-native infrastructure on AWS, GCP, and Azure. From container orchestration to serverless pipelines, we ensure your systems are performant, secure, and cost-efficient at any scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Tabbed Projects Section -->
+<section class="projects-section" id="projects">
+  <div class="section-header">
+    <p class="section-desc">Here are some of our past sucess stories across a wide variety of industries:</p>
+  </div>
+
+  <mat-tab-group
+    class="mde-tabs"
+    animationDuration="200ms"
+    [(selectedIndex)]="activeTab"
+  >
+    @for (tab of tabNames; track tab) {
+      <mat-tab [label]="tab">
+        <div class="tab-content">
+          @if (tab === 'Energy') {
+            <div class="success-story-grid-two-cards">
+              @for (p of energyProjects; track p.title) {
+                <mat-card class="success-story-card mdc-elevation-1">
+                  <mat-card-content class="success-story-card-content">
+                    <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
+                    <h3 class="success-story-card-title">{{ p.title }}</h3>
+                    <p class="success-story-card-desc">{{ p.description }}</p>
+                    <div class="project-tech">
+                      @for (tech of p.tech; track tech) {
+                        <span class="tech-badge">{{ tech }}</span>
+                      }
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+              }
+            </div>
+          } @else {
+            <div class="project-grid">
+              @for (project of (tab === 'Completed Projects' ? completedProjects : activeProjects); track project.title) {
+                <mat-card class="project-card mdc-elevation-1">
+                  <mat-card-content class="project-card-content">
+                    <div class="project-header">
+                      <span class="project-title">{{ project.title }}</span>
+                      <span class="project-status" [class]="project.status === 'Completed' ? 'status-done' : 'status-active'">
+                        {{ project.status }}
+                      </span>
+                    </div>
+                    <p class="project-desc">{{ project.description }}</p>
+                    <div class="project-meta">
+                      <span class="project-duration">
+                        <mat-icon class="project-meta-icon">schedule</mat-icon>
+                        {{ project.duration }}
+                      </span>
+                    </div>
+                    <div class="project-tech">
+                      @for (tech of project.tech; track tech) {
+                        <span class="tech-badge">{{ tech }}</span>
+                      }
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+              }
+            </div>
+          }
+        </div>
+      </mat-tab>
+    }
+  </mat-tab-group>
+</section>
+
+<!-- Open Source Section -->
+<section class="opensource-section" id="open-source">
+  <div class="section-header">
+    <p class="section-desc">Many say they write good code — we prove it. Explore our successful open-source projects.</p>
+  </div>
+
+  <div class="opensource-grid">
+    @for (repo of repos; track repo.name) {
+      <mat-card class="repo-card mdc-elevation-1">
+        <mat-card-content class="repo-card-content">
+          <div class="repo-header">
+            <mat-icon class="repo-icon">code</mat-icon>
+            <span class="repo-name">{{ repo.name }}</span>
+            <span class="repo-status" [class]="repo.status === 'Active' ? 'status-active' : (repo.status === 'Stable' ? 'status-done' : 'status-beta')">
+              {{ repo.status }}
+            </span>
+          </div>
+          <p class="repo-desc">{{ repo.description }}</p>
+          <div class="repo-tech">
+            @for (tech of repo.tech; track tech) {
+              <span class="tech-badge tech-badge-outline">{{ tech }}</span>
+            }
+          </div>
+          <div class="repo-actions">
+            <a [href]="repo.link" target="_blank" rel="noopener" class="repo-link">
+              <mat-icon>open_in_new</mat-icon>
+              Repository
+            </a>
+            @if (repo.docs) {
+              <a [href]="repo.docs" target="_blank" rel="noopener" class="repo-link">
+                <mat-icon>menu_book</mat-icon>
+                Documentation
+              </a>
+            }
+          </div>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <span class="footer-title">Munich Data Engineering</span>
+      <p class="footer-tagline">Software · Machine Learning · Cloud</p>
+    </div>
+    <div class="footer-links">
+      <a href="#projects" class="footer-link">Projects</a>
+      <a href="#open-source" class="footer-link">Open Source</a>
+      <a href="https://github.com/munich-data-eng" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+      <a href="mailto:contact@mde.dev" class="footer-link">Contact</a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Munich Data Engineering. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<router-outlet />

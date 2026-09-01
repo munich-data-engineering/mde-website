@@ -1,0 +1,60 @@
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme((
+    color: (
+      primary: mat.$magenta-palette,
+      tertiary: mat.$violet-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+// Explicit M3 dark theme text emphasis colors
+// Both camelCase (Angular Material convention) and kebab-case (fallback) forms
+html {
+  --mat-sys-onSurface: #e6e1e5;
+  --mat-sys-onSurfaceVariant: #cac4d0;
+  --mat-sys-onSurfaceMedium: #85808a;
+  --mat-sys-on-surface: #e6e1e5;
+  --mat-sys-on-surface-variant: #cac4d0;
+  --mat-sys-on-surface-medium: #85808a;
+  --mat-tab-inactive-label-text-color: #cac4d0;
+  --mat-tab-active-label-text-color: #ff8c3e;
+  --mat-tab-header-inactive-label-color: #cac4d0;
+  --mat-tab-header-active-label-color: #ff8c3e;
+}
+
+html {
+  --mat-sys-primary: #ff8c3e;
+  --mat-sys-onPrimary: #000000;
+  --mat-sys-primaryContainer: #ffb57e;
+  --mat-sys-onPrimaryContainer: #2e1200;
+  --mat-sys-secondary: #ff6f6f;
+  --mat-sys-onSecondary: #ffffff;
+  --mat-sys-tertiary: #ffcc77;
+  --mat-sys-onTertiary: #000000;
+}
+
+// M3 dark theme surface override - lighter surfaces like m3.material.io
+html {
+  --mat-sys-surface: #141314;
+  --mat-sys-surfaceDim: #000000;
+  --mat-sys-surfaceBright: #393939;
+  --mat-sys-surfaceContainerLowest: #000000;
+  --mat-sys-surfaceContainerLow: #0a0a0a;
+  --mat-sys-surfaceContainer: #121212;
+  --mat-sys-surfaceContainerHigh: #1e1e1e;
+  --mat-sys-surfaceContainerHighest: #282828;
+  --mat-sys-inverseSurface: #333333;
+}
+
+body {
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-onSurface);
+  font: var(--mat-sys-bodyMedium);
+  margin: 0;
+  height: 100%;
+}
