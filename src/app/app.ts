@@ -53,6 +53,14 @@ interface RetailProject {
 	duration: string;
 }
 
+interface ServiceProject {
+	title: string;
+	description: string;
+	image: string;
+	tech: string[];
+	duration: string;
+}
+
 @Component({
 	selector: 'app-root',
 	imports: [
@@ -188,6 +196,34 @@ export class App {
 		},
 	];
 
+	readonly serviceProjects: ServiceProject[] = [
+		{
+			title: 'Customer Reactivation',
+			description:
+			    'We built a machine learning engine that identifies dormant customers and predicts the optimal reactivation channel and incentive for each individual. Deployed across multiple service verticals, the system reactivated 12% of churned customers within 90 days, generating an estimated €3.2M in recovered revenue.',
+			image: 'lottery.png',
+			tech:
+			    [
+				    'Python', 'XGBoost', 'Kubernetes', 'Docker',
+				    'AWS', 'Lambda'
+			    ],
+			duration: '6 months',
+		},
+		{
+			title: 'Digitally Enabled Audit',
+			description:
+			    'We transformed a traditional audit workflow into a fully digital, data-driven platform that automates evidence collection, risk assessment, and compliance reporting. By replacing manual processes with intelligent automation, the firm reduced audit cycle times by 45% while achieving 99.7% data accuracy across all reporting lines.',
+			image: 'audit.png',
+			tech:
+			    [
+				    'Python', 'Machine Learning', 'PostgreSQL',
+				    'AWS', 'DevOps', 'Tableau'
+			    ],
+			duration: '8 months',
+		},
+	];
+
+
 
 	readonly repos: Repo[] = [
 		{
@@ -229,5 +265,6 @@ export class App {
 		},
 	];
 
-	readonly tabNames = ['Energy', 'Healthcare', 'Automotive', 'Retail'];
+	readonly tabNames =
+	    ['Energy', 'Healthcare', 'Automotive', 'Retail', 'Service'];
 }
