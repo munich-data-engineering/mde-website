@@ -45,6 +45,13 @@ interface AutomotiveProject {
 	tech: string[];
 	duration: string;
 }
+interface RetailProject {
+	title: string;
+	description: string;
+	image: string;
+	tech: string[];
+	duration: string;
+}
 
 @Component({
 	selector: 'app-root',
@@ -204,6 +211,32 @@ export class App {
 			duration: '7 months',
 		},
 	];
+	readonly retailProjects: RetailProject[] = [
+		{
+			title: 'Product Return Prediction in Online Retail',
+			description:
+			    'We built a machine learning system to predict product returns for a major online retailer, analyzing customer behavior, product metadata, and historical return patterns. The model reduced return processing costs by 28% and helped the retailer proactively improve product descriptions and sizing guides.',
+			image: 'ecommerce.png',
+			tech:
+			    [
+				    'Python', 'XGBoost', 'AWS', 'S3',
+				    'PostgreSQL', 'Airflow'
+			    ],
+			duration: '8 months',
+		},
+		{
+			title: 'Sales Prediction',
+			description:
+			    'We engineered a time-series forecasting pipeline for demand prediction across 10,000+ SKU categories for a multi-channel retailer. The model integrates seasonality, promotions, and macroeconomic signals to produce weekly sales forecasts, improving inventory accuracy by 34% and reducing stockouts by 41%.',
+			image: 'store.png',
+			tech:
+			    [
+				    'Python', 'TensorFlow', 'Kubernetes',
+				    'Docker', 'GCP', 'BigQuery', 'Looker'
+			    ],
+			duration: '10 months',
+		},
+	];
 
 
 	readonly repos: Repo[] = [
@@ -247,7 +280,7 @@ export class App {
 	];
 
 	readonly tabNames = [
-		'Energy', 'Healthcare', 'Automotive', 'Completed Projects',
+		'Energy', 'Healthcare', 'Automotive', 'Retail', 'Completed Projects',
 		'Active Projects'
 	];
 }
