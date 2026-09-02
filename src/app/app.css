@@ -729,6 +729,10 @@
 
 .footer {
   background: var(--mat-sys-surfaceContainerHighest);
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+  box-shadow: var(--mat-sys-level1) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding: 60px 24px 40px;
 }
