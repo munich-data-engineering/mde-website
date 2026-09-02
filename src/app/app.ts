@@ -61,6 +61,14 @@ interface ServiceProject {
 	duration: string;
 }
 
+interface RoboticsProject {
+	title: string;
+	description: string;
+	image: string;
+	tech: string[];
+	duration: string;
+}
+
 @Component({
 	selector: 'app-root',
 	imports: [
@@ -223,7 +231,20 @@ export class App {
 		},
 	];
 
-
+	readonly roboticsProjects: RoboticsProject[] = [
+		{
+			title: 'Predictive Maintenance',
+			description:
+			    'We deployed an AI-powered predictive maintenance system for an industrial manufacturing line, using sensor data and machine learning to forecast equipment failures up to 14 days in advance. The system reduced unplanned downtime by 37%, saving approximately €2.1M annually in lost production and emergency repair costs.',
+			image: 'robot_arm.png',
+			tech:
+			    [
+				    'Python', 'TensorFlow', 'IoT',
+				    'Kubernetes', 'AWS', 'Grafana'
+			    ],
+			duration: '7 months',
+		},
+	];
 
 	readonly repos: Repo[] = [
 		{
@@ -266,5 +287,5 @@ export class App {
 	];
 
 	readonly tabNames =
-	    ['Energy', 'Healthcare', 'Automotive', 'Retail', 'Service'];
+	    ['Energy', 'Healthcare', 'Automotive', 'Retail', 'Service', 'Robotics'];
 }
