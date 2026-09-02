@@ -84,6 +84,40 @@
                 </mat-card>
               }
             </div>
+          } @else if (tab === 'Healthcare') {
+            <div class="success-story-grid-three-cards">
+              @for (p of healthcareProjects; track p.title) {
+                <mat-card class="success-story-card mdc-elevation-1">
+                  <mat-card-content class="success-story-card-content">
+                    <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
+                    <h3 class="success-story-card-title">{{ p.title }}</h3>
+                    <p class="success-story-card-desc">{{ p.description }}</p>
+                    <div class="project-tech">
+                      @for (tech of p.tech; track tech) {
+                        <span class="tech-badge">{{ tech }}</span>
+                      }
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+              }
+            </div>
+          } @else if (tab === 'Automotive') {
+            <div class="success-story-grid-two-cards">
+              @for (p of automotiveProjects; track p.title) {
+                <mat-card class="success-story-card mdc-elevation-1">
+                  <mat-card-content class="success-story-card-content">
+                    <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
+                    <h3 class="success-story-card-title">{{ p.title }}</h3>
+                    <p class="success-story-card-desc">{{ p.description }}</p>
+                    <div class="project-tech">
+                      @for (tech of p.tech; track tech) {
+                        <span class="tech-badge">{{ tech }}</span>
+                      }
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+              }
+            </div>
           } @else {
             <div class="project-grid">
               @for (project of (tab === 'Completed Projects' ? completedProjects : activeProjects); track project.title) {
