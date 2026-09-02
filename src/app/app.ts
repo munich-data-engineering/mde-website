@@ -4,6 +4,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import {RouterOutlet} from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 interface Project {
 	title: string;
@@ -73,7 +74,7 @@ interface RoboticsProject {
 	selector: 'app-root',
 	imports: [
 		RouterOutlet, MatTabsModule, MatCardModule, MatButtonModule,
-		MatIconModule
+		MatIconModule, FormsModule
 	],
 	templateUrl: './app.html',
 	styleUrl: './app.css',
@@ -288,4 +289,8 @@ export class App {
 
 	readonly tabNames =
 	    ['Energy', 'Healthcare', 'Automotive', 'Retail', 'Service', 'Robotics'];
+
+	onSubmit() {
+		alert('Message sent! (hook up your backend or mailto handler here)');
+	}
 }

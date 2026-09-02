@@ -626,6 +626,102 @@
   width: 18px !important;
   height: 18px !important;
 }
+/* ==============================
+   Contact Section
+   ============================== */
+
+.contact-section {
+  padding: 80px 24px 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contact-content {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--mat-sys-onSurface);
+  margin: 0 0 8px;
+  letter-spacing: -0.3px;
+}
+
+.contact-desc {
+  font-size: 28px;
+  color: var(--mat-sys-onSurfaceVariant);
+  font-family: Roboto, sans-serif !important;
+  margin: 0 0 48px;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--mat-sys-surfaceContainerHigh);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  font-size: 16px;
+  color: var(--mat-sys-onSurface);
+  font-family: Roboto, sans-serif !important;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #ff8c3e;
+  box-shadow: 0 0 0 3px rgba(255, 140, 62, 0.12);
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: var(--mat-sys-onSurfaceVariant);
+  opacity: 0.6;
+}
+
+.contact-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-btn {
+  align-self: center;
+  padding: 16px 48px;
+  background: #ff8c3e;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Roboto, sans-serif !important;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.contact-btn:hover {
+  background: #ffa05a;
+  box-shadow: 0 4px 16px rgba(255, 140, 62, 0.3);
+}
 
 /* ==============================
    Footer
@@ -781,5 +877,16 @@
     font-size: 40px;
     width: 40px;
     height: 40px;
+  }
+  .contact-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-title {
+    font-size: 28px;
+  }
+
+  .contact-desc {
+    font-size: 18px;
   }
 }
