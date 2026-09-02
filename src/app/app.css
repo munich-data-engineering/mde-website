@@ -478,6 +478,49 @@
   gap: 8px;
   margin-bottom: 16px;
 }
+.quality-section {
+  padding: 48px 24px 64px;
+  margin: 0 auto;
+}
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(570px, 1fr));
+  gap: 24px;
+}
+.quality-card {
+  background: var(--mat-sys-surfaceContainerHigh) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  border: none !important;
+}
+.quality-card-content {
+  height: 531px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.quality-card-img {
+  width: calc(100% + 56px);
+  margin-left: -28px;
+  margin-right: -28px;
+  height: auto;
+  object-fit: cover;
+}
+.quality-card-title {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--mat-sys-onSurface);
+  margin: 0 0 16px;
+}
+.quality-card-desc {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--mat-sys-onSurfaceVariant);
+  margin: 0 0 16px;
+}
 
 /* ==============================
    Open Source Section
@@ -717,7 +760,8 @@
   }
 
   .project-grid,
-  .opensource-grid {
+  .opensource-grid,
+  .quality-grid {
     grid-template-columns: 1fr;
   }
 
