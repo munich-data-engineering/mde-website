@@ -56,7 +56,7 @@
 <!-- Tabbed Projects Section -->
 <section class="projects-section" id="projects">
   <div class="section-header">
-    <p class="section-desc">Here are some of our past sucess stories across a wide variety of industries:</p>
+    <p class="section-desc">Here are some of our past success stories across a wide variety of industries:</p>
   </div>
 
   <mat-tab-group
@@ -128,33 +128,6 @@
                     <p class="success-story-card-desc">{{ p.description }}</p>
                     <div class="project-tech">
                       @for (tech of p.tech; track tech) {
-                        <span class="tech-badge">{{ tech }}</span>
-                      }
-                    </div>
-                  </mat-card-content>
-                </mat-card>
-              }
-            </div>
-          } @else {
-            <div class="project-grid">
-              @for (project of (tab === 'Completed Projects' ? completedProjects : activeProjects); track project.title) {
-                <mat-card class="project-card mdc-elevation-1">
-                  <mat-card-content class="project-card-content">
-                    <div class="project-header">
-                      <span class="project-title">{{ project.title }}</span>
-                      <span class="project-status" [class]="project.status === 'Completed' ? 'status-done' : 'status-active'">
-                        {{ project.status }}
-                      </span>
-                    </div>
-                    <p class="project-desc">{{ project.description }}</p>
-                    <div class="project-meta">
-                      <span class="project-duration">
-                        <mat-icon class="project-meta-icon">schedule</mat-icon>
-                        {{ project.duration }}
-                      </span>
-                    </div>
-                    <div class="project-tech">
-                      @for (tech of project.tech; track tech) {
                         <span class="tech-badge">{{ tech }}</span>
                       }
                     </div>

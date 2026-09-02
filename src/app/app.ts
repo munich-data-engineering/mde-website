@@ -67,56 +67,6 @@ export class App {
 
 	activeTab = signal(0);
 
-	readonly completedProjects: Project[] = [
-		{
-			title: 'Cloud-Native Data Platform',
-			description:
-			    'Built a scalable data platform on Kubernetes, processing 10TB+ daily with real-time analytics and automated ML model pipelines.',
-			duration: '18 months',
-			tech:
-			    [
-				    'Kubernetes', 'Airflow', 'Python',
-				    'BigQuery', 'TensorFlow'
-			    ],
-			status: 'Completed',
-		},
-		{
-			title: 'Real-Time Analytics Pipeline',
-			description:
-			    'Designed and implemented a streaming data pipeline using Apache Kafka and Flink for sub-second analytics dashboards.',
-			duration: '12 months',
-			tech: ['Apache Kafka', 'Flink', 'ClickHouse', 'React'],
-			status: 'Completed',
-		},
-		{
-			title: 'Enterprise Cloud Migration',
-			description:
-			    'Led migration of legacy data systems to cloud-native architecture, reducing costs by 40% and improving uptime to 99.99%.',
-			duration: '24 months',
-			tech:
-			    [
-				    'AWS', 'Terraform', 'PostgreSQL', 'dbt',
-				    'Airbyte'
-			    ],
-			status: 'Completed',
-		},
-	];
-
-	readonly activeProjects: Project[] = [
-		{
-			title: 'Data Governance Framework',
-			description:
-			    'Developing a comprehensive data governance framework with automated lineage tracking, quality checks, and compliance reporting.',
-			duration: 'Ongoing',
-			tech:
-			    [
-				    'OpenMetadata', 'Great Expectations',
-				    'Python', 'GraphQL'
-			    ],
-			status: 'Active',
-		},
-	];
-
 	readonly energyProjects: EnergyProject[] = [
 		{
 			title: 'Gas Market Model',
@@ -279,8 +229,5 @@ export class App {
 		},
 	];
 
-	readonly tabNames = [
-		'Energy', 'Healthcare', 'Automotive', 'Retail', 'Completed Projects',
-		'Active Projects'
-	];
+	readonly tabNames = ['Energy', 'Healthcare', 'Automotive', 'Retail'];
 }
