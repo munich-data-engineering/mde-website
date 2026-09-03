@@ -154,9 +154,11 @@
    ============================== */
 
 .competencies-section {
-  padding: 64px 24px;
+
+  padding: 64px 24px 80px;
   max-width: 1280px;
   margin: 0 auto;
+
 }
 
 .competencies-content {
@@ -176,6 +178,7 @@
   margin-right: auto;
 }
 
+
 .competencies-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -190,6 +193,7 @@
 
   border: none;
 }
+
 .competency-card:hover {
   filter: brightness(1.08);
 }
@@ -240,9 +244,6 @@
   --mat-tab-header-label-text-opacity: 1;
 }
 
-.mde-tabs .mat-mdc-tab-header {
-  background: transparent;
-}
 
 .mde-tabs .mat-mdc-tab-list {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -266,7 +267,7 @@
 .mde-tabs .mdc-tab__text-label {
   color: var(--mat-sys-onSurfaceVariant) !important;
   font-family: Roboto, sans-serif !important;
-  font-size: 15px !important;
+  font-size: 18px !important;
   font-weight: 500 !important;
   letter-spacing: 0.2px !important;
   transition: color 0.2s ease !important;
@@ -412,6 +413,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-family: Roboto, sans-serif !important;
 }
+
 /* ==============================
    Success Story Cards
    ============================== */
@@ -478,21 +480,26 @@
   gap: 8px;
   margin-bottom: 16px;
 }
+
 .quality-section {
-  padding: 48px 24px 64px;
+  padding: 64px 24px 80px;
+  max-width: 1280px;
   margin: 0 auto;
 }
+
 .quality-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(570px, 1fr));
   gap: 24px;
 }
+
 .quality-card {
   background: var(--mat-sys-surfaceContainerHigh) !important;
   border-radius: 16px !important;
   overflow: hidden;
   border: none !important;
 }
+
 .quality-card-content {
   height: 531px;
   display: flex;
@@ -500,6 +507,7 @@
   justify-content: center;
   text-align: left;
 }
+
 .quality-card-img {
   width: calc(100% + 56px);
   margin-left: -28px;
@@ -507,6 +515,7 @@
   height: auto;
   object-fit: cover;
 }
+
 .quality-card-title {
   font-family: 'Google Sans', sans-serif;
   font-size: 28px;
@@ -514,6 +523,7 @@
   color: var(--mat-sys-onSurface);
   margin: 0 0 16px;
 }
+
 .quality-card-desc {
   font-family: 'Google Sans', sans-serif;
   font-size: 18px;
@@ -626,6 +636,7 @@
   width: 18px !important;
   height: 18px !important;
 }
+
 /* ==============================
    Contact Section
    ============================== */
@@ -882,6 +893,7 @@
     width: 40px;
     height: 40px;
   }
+
   .contact-row {
     grid-template-columns: 1fr;
   }

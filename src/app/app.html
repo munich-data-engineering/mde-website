@@ -17,211 +17,49 @@
     <!-- Right card: image -->
     <!-- Image style: contemporary graphic illustration with strong influences from Memphis design, pop art, and digital collage aesthetics -->
     <div class="hero-image-card mdc-elevation-3">
-      <img
-        src="/img/munich_skyline.png"
-        alt="Munich skyline at sunset"
-        class="hero-image"
-      />
+      <img src="/img/munich_skyline.png" alt="Munich skyline at sunset" class="hero-image" />
     </div>
   </div>
+</section>
 
 <!-- Core Competencies Section -->
 <section class="competencies-section">
   <div class="competencies-content">
-    <p class="competencies-intro">We combine software engineering, machine learning and cloud computing to build fast, reliable and maintainable machine learning pipelines and data-driven software.</p>
+    <p class="competencies-intro">We combine software engineering, machine learning and cloud computing to build fast,
+      reliable and maintainable machine learning pipelines and data-driven software.</p>
 
     <div class="competencies-grid">
       <div class="competency-card mdc-elevation-1">
         <mat-icon class="competency-icon">code</mat-icon>
         <h3 class="competency-title">Software Engineering</h3>
-        <p class="competency-desc">Code Quality is Our Priority — we adhere to industry best practices, including Clean Code principles and CI/CD workflows. Our strong theoretical foundation as well as our reliance on empirical research on code quality enables us to consistently deliver exceptional code.</p>
+        <p class="competency-desc">Code quality is our priority — we adhere to industry best practices, including
+          Clean Code principles and CI/CD workflows. Our strong theoretical foundation as well as our reliance on
+          empirical research on code quality enables us to consistently deliver exceptional code.</p>
       </div>
 
       <div class="competency-card mdc-elevation-1">
         <mat-icon class="competency-icon">psychology</mat-icon>
         <h3 class="competency-title">Machine Learning</h3>
-        <p class="competency-desc">From predictive models to intelligent automation, we design and deploy ML systems that scale. Our expertise spans deep learning, NLP, and recommendation systems — turning complex data into actionable insights.</p>
+        <p class="competency-desc">From predictive models to intelligent automation, we design and deploy ML systems
+          that scale. Our expertise spans deep learning, NLP, and recommendation systems — turning complex data into
+          actionable insights.</p>
       </div>
 
       <div class="competency-card mdc-elevation-1">
         <mat-icon class="competency-icon">cloud</mat-icon>
         <h3 class="competency-title">Cloud Computing</h3>
-        <p class="competency-desc">We architect resilient, cloud-native infrastructure on AWS, GCP, and Azure. From container orchestration to serverless pipelines, we ensure your systems are performant, secure, and cost-efficient at any scale.</p>
+        <p class="competency-desc">We architect resilient, cloud-native infrastructure on AWS, GCP, and Azure. From
+          container orchestration to serverless pipelines, we ensure your systems are performant, secure, and
+          cost-efficient at any scale.</p>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- Tabbed Projects Section -->
-<section class="projects-section" id="projects">
-  <div class="section-header">
-    <p class="section-desc">Here are some of our past success stories across a wide variety of industries:</p>
-  </div>
-
-  <mat-tab-group
-    class="mde-tabs"
-    animationDuration="200ms"
-    [(selectedIndex)]="activeTab"
-  >
-    @for (tab of tabNames; track tab) {
-      <mat-tab [label]="tab">
-        <div class="tab-content">
-          @if (tab === 'Energy') {
-            <div class="success-story-grid-two-cards">
-              @for (p of energyProjects; track p.title) {
-                <mat-card class="success-story-card mdc-elevation-1">
-                  <mat-card-content class="success-story-card-content">
-                    <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
-                    <h3 class="success-story-card-title">{{ p.title }}</h3>
-                    <p class="success-story-card-desc">{{ p.description }}</p>
-                    <div class="project-tech">
-                      @for (tech of p.tech; track tech) {
-                        <span class="tech-badge">{{ tech }}</span>
-                      }
-                    </div>
-                  </mat-card-content>
-                </mat-card>
-              }
-            </div>
-          } @else if (tab === 'Healthcare') {
-            <div class="success-story-grid-three-cards">
-              @for (p of healthcareProjects; track p.title) {
-                <mat-card class="success-story-card mdc-elevation-1">
-                  <mat-card-content class="success-story-card-content">
-                    <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
-                    <h3 class="success-story-card-title">{{ p.title }}</h3>
-                    <p class="success-story-card-desc">{{ p.description }}</p>
-                    <div class="project-tech">
-                      @for (tech of p.tech; track tech) {
-                        <span class="tech-badge">{{ tech }}</span>
-                      }
-                    </div>
-                  </mat-card-content>
-                </mat-card>
-              }
-            </div>
-          } @else if (tab === 'Automotive') {
-            <div class="success-story-grid-two-cards">
-              @for (p of automotiveProjects; track p.title) {
-                <mat-card class="success-story-card mdc-elevation-1">
-                  <mat-card-content class="success-story-card-content">
-                    <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
-                    <h3 class="success-story-card-title">{{ p.title }}</h3>
-                    <p class="success-story-card-desc">{{ p.description }}</p>
-                    <div class="project-tech">
-                      @for (tech of p.tech; track tech) {
-                        <span class="tech-badge">{{ tech }}</span>
-                      }
-                    </div>
-                  </mat-card-content>
-                </mat-card>
-              }
-            </div>
-          } @else if (tab === 'Retail') {
-            <div class="success-story-grid-two-cards">
-              @for (p of retailProjects; track p.title) {
-                <mat-card class="success-story-card mdc-elevation-1">
-                  <mat-card-content class="success-story-card-content">
-                    <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
-                    <h3 class="success-story-card-title">{{ p.title }}</h3>
-                    <p class="success-story-card-desc">{{ p.description }}</p>
-                    <div class="project-tech">
-                      @for (tech of p.tech; track tech) {
-                        <span class="tech-badge">{{ tech }}</span>
-                      }
-                    </div>
-                  </mat-card-content>
-                </mat-card>
-              }
-            </div>
-          } @else if (tab === 'Service') {
-            <div class="success-story-grid-two-cards">
-              @for (p of serviceProjects; track p.title) {
-                <mat-card class="success-story-card mdc-elevation-1">
-                  <mat-card-content class="success-story-card-content">
-                    <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
-                    <h3 class="success-story-card-title">{{ p.title }}</h3>
-                    <p class="success-story-card-desc">{{ p.description }}</p>
-                    <div class="project-tech">
-                      @for (tech of p.tech; track tech) {
-                        <span class="tech-badge">{{ tech }}</span>
-                      }
-                    </div>
-                  </mat-card-content>
-                </mat-card>
-              }
-            </div>
-          } @else if (tab === 'Robotics') {
-            <div class="success-story-grid-two-cards">
-              @for (p of roboticsProjects; track p.title) {
-                <mat-card class="success-story-card mdc-elevation-1">
-                  <mat-card-content class="success-story-card-content">
-                    <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
-                    <h3 class="success-story-card-title">{{ p.title }}</h3>
-                    <p class="success-story-card-desc">{{ p.description }}</p>
-                    <div class="project-tech">
-                      @for (tech of p.tech; track tech) {
-                        <span class="tech-badge">{{ tech }}</span>
-                      }
-                    </div>
-                  </mat-card-content>
-                </mat-card>
-              }
-            </div>
-          }
-        </div>
-      </mat-tab>
-    }
-  </mat-tab-group>
-
-
-<!-- Open Source Section -->
-<section class="opensource-section" id="open-source">
-  <div class="section-header">
-    <p class="section-desc">Many say they write good code — we prove it. Explore our successful open-source projects.</p>
-  </div>
-
-  <div class="opensource-grid">
-    @for (repo of repos; track repo.name) {
-      <mat-card class="repo-card mdc-elevation-1">
-        <mat-card-content class="repo-card-content">
-          <div class="repo-header">
-            <mat-icon class="repo-icon">code</mat-icon>
-            <span class="repo-name">{{ repo.name }}</span>
-            <span class="repo-status" [class]="repo.status === 'Active' ? 'status-active' : (repo.status === 'Stable' ? 'status-done' : 'status-beta')">
-              {{ repo.status }}
-            </span>
-          </div>
-          <p class="repo-desc">{{ repo.description }}</p>
-          <div class="repo-tech">
-            @for (tech of repo.tech; track tech) {
-              <span class="tech-badge tech-badge-outline">{{ tech }}</span>
-            }
-          </div>
-          <div class="repo-actions">
-            <a [href]="repo.link" target="_blank" rel="noopener" class="repo-link">
-              <mat-icon>open_in_new</mat-icon>
-              Repository
-            </a>
-            @if (repo.docs) {
-              <a [href]="repo.docs" target="_blank" rel="noopener" class="repo-link">
-                <mat-icon>menu_book</mat-icon>
-                Documentation
-              </a>
-            }
-          </div>
-        </mat-card-content>
-      </mat-card>
-    }
-  </div>
-</section>
-
-
 <!-- Code Quality Section -->
 <section class="quality-section">
   <div class="section-header">
-    <p class="section-desc">Code quality is a major challenge in many IT projects.</p>
+    <p class="section-desc">Code quality is a major challenge in many IT projects - we can help.</p>
   </div>
   <div class="quality-grid">
     <!-- Left card: image -->
@@ -235,12 +73,111 @@
     <mat-card class="quality-card mdc-elevation-1">
       <mat-card-content class="quality-card-content">
         <p class="quality-card-desc">
-          Is adding new features challenging? Is your codebase difficult for others to understand? Does onboarding new team members take longer than expected? Does building your software consist of many manual steps? If so, you may be facing issues with code quality.
+          Is adding new features challenging? <br>
+          Is your codebase difficult for others to understand? <br>
+          Does onboarding new team members take long? <br>
+          Does building your software consist of many manual steps?
+          <br><br> If
+          so, you may be facing issues with code quality.
         </p>
       </mat-card-content>
     </mat-card>
+
+    <!-- Left card: text -->
+    <mat-card class="quality-card mdc-elevation-1">
+      <mat-card-content class="quality-card-content">
+        <p class="quality-card-desc">
+          The solution is... <br>
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Right card: image -->
+    <mat-card class="quality-card mdc-elevation-1">
+      <mat-card-content class="quality-card-content">
+        <img class="quality-card-img" src="/img/code.png" alt="Code quality2" />
+      </mat-card-content>
+    </mat-card>
+
   </div>
 </section>
+
+<!-- Open Source Section -->
+<section class="opensource-section" id="open-source">
+  <div class="section-header">
+    <p class="section-desc">Many say they write good code — we prove it. Explore our successful open-source
+      projects.</p>
+  </div>
+
+  <div class="opensource-grid">
+    @for (repo of repos; track repo.name) {
+    <mat-card class="repo-card mdc-elevation-1">
+      <mat-card-content class="repo-card-content">
+        <div class="repo-header">
+          <mat-icon class="repo-icon">code</mat-icon>
+          <span class="repo-name">{{ repo.name }}</span>
+          <span class="repo-status"
+            [class]="repo.status === 'Active' ? 'status-active' : (repo.status === 'Stable' ? 'status-done' : 'status-beta')">
+            {{ repo.status }}
+          </span>
+        </div>
+        <p class="repo-desc">{{ repo.description }}</p>
+        <div class="repo-tech">
+          @for (tech of repo.tech; track tech) {
+          <span class="tech-badge tech-badge-outline">{{ tech }}</span>
+          }
+        </div>
+        <div class="repo-actions">
+          <a [href]="repo.link" target="_blank" rel="noopener" class="repo-link">
+            <mat-icon>open_in_new</mat-icon>
+            Repository
+          </a>
+          @if (repo.docs) {
+          <a [href]="repo.docs" target="_blank" rel="noopener" class="repo-link">
+            <mat-icon>menu_book</mat-icon>
+            Documentation
+          </a>
+          }
+        </div>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</section>
+
+<!-- Tabbed Projects Section -->
+<section class="projects-section" id="projects">
+  <div class="section-header">
+    <p class="section-desc">Here are some of our past success stories across a wide variety of industries:</p>
+  </div>
+
+  <mat-tab-group class="mde-tabs" animationDuration="200ms" [(selectedIndex)]="activeTab">
+    @for (tab of tabNames; track tab) {
+    <mat-tab [label]="tab">
+      <div class="tab-content">
+        <div
+          [class]="getSuccessStories(tab).length === 3? 'success-story-grid-three-cards': 'success-story-grid-two-cards'">
+          @for (p of getSuccessStories(tab); track p.title) {
+          <mat-card class="success-story-card mdc-elevation-1">
+            <mat-card-content class="success-story-card-content">
+              <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
+              <h3 class="success-story-card-title">{{ p.title }}</h3>
+              <p class="success-story-card-desc">{{ p.description }}</p>
+              <div class="project-tech">
+                @for (tech of p.tech; track tech) {
+                <span class="tech-badge">{{ tech }}</span>
+                }
+              </div>
+            </mat-card-content>
+          </mat-card>
+          }
+        </div>
+      </div>
+    </mat-tab>
+    }
+  </mat-tab-group>
+</section>
+
 <!-- Contact Section -->
 <section class="contact-section">
   <div class="contact-content">
@@ -256,7 +193,6 @@
     </form>
   </div>
 </section>
-
 
 <!-- Footer -->
 <footer class="footer">
