@@ -471,6 +471,7 @@
   line-height: 1.6;
   color: var(--mat-sys-onSurfaceVariant);
   margin: 0 0 16px;
+  text-align: left;
 }
 
 .success-story-card-meta {

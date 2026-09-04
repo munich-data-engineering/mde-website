@@ -87,13 +87,13 @@
     <mat-card class="quality-card mdc-elevation-1">
       <mat-card-content class="quality-card-content">
         <p class="quality-card-desc">
-	 Modern software engineering must be based on scientific principles.<br><br>
-         Software engineering needs to be grounded in theory.<br>
-         Category Theory enforces clear separation of concerns.<br>
-	 Type Theory identifies logical flaws before the code is even run.<br><br>
-         Software engineering needs empirical verification.<br>
-	 Large-scale analysis can verify which software patterns reduce bugs.<br>
-	 Automated testing enables continuuous delivery of reliable code.
+          Modern software engineering is based on scientific principles.<br><br>
+          Software engineering needs to be grounded in theory.<br>
+          Category Theory enforces clear separation of concerns.<br>
+          Type Theory identifies logical flaws before the code is even run.<br><br>
+          Software engineering needs empirical verification.<br>
+          Large-scale analysis can verify which software patterns reduce bugs.<br>
+          Automated testing enables continuuous delivery of reliable code.
         </p>
       </mat-card-content>
     </mat-card>
@@ -168,7 +168,9 @@
             <mat-card-content class="success-story-card-content">
               <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
               <h3 class="success-story-card-title">{{ p.title }}</h3>
-              <p class="success-story-card-desc">{{ p.description }}</p>
+              <ul class="success-story-card-desc">
+                @for (line of p.description; track line) {<li>{{ line }}</li>}
+              </ul>
               <div class="project-tech">
                 @for (tech of p.tech; track tech) {
                 <span class="tech-badge">{{ tech }}</span>

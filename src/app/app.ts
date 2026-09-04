@@ -17,7 +17,7 @@ interface Repo {
 
 interface SuccessStory {
 	title: string;
-	description: string;
+	description: string[];
 	image: string;
 	tech: string[];
 }
@@ -25,24 +25,31 @@ interface SuccessStory {
 const energyProjects: SuccessStory[] = [
 	{
 		title: 'Gas Market Model',
-		description:
-			'In the wake of the war in Ukraine, we developed a prediction model for European Gas Markets. The model delivers predictions for household demand, industrial demand, gas-to-power and cross-border gas flows twice a day for all major European countries. Our automated evaluations demonstrate that the predictions significantly outperform externally available models.',
+		description: [
+			'Project was commissioned in the wake of the war in Ukraine',
+			'Developed machine learning system for predicting all critical components of the gas market',
+			'System was developed from scratch: ETL, Data collection, modelling, productive implementation, cloud orchestration, frontend',
+			'System reliably delivers predictions on a daily basis'],
 		image: 'gas_pipelines.png',
 		tech:
 			[
 				'Python', 'Machine Learning', 'PostgreSQL',
-				'Golang', 'AWS', 'xgboost', 'DevOps'
+				'Golang', 'AWS', 'xgboost', 'DevOps', 'TypeScript', 'Angular'
 			],
 	},
 	{
 		title: 'Electricity Price Prediction',
-		description:
-			'We assumed responsibility for the development and maintenance of an Electricity Price Prediction model. When we inherited the model, the code quality was so poor that the team was hesitant to modify even a single line. Through a series of refactorings, we significantly enhanced code quality, empowering the team to add new features almost daily. Additionally, we improved the runtime speed by a factor of 30 and greatly improved the UX.',
+		description: [
+			'Introduced static typing, static code analysis, automated unit tests and functional-style programming to the Python code',
+			'Significantly improved the code quality and maintainability of the existing codebase as well as ETL processes',
+			'Increased the runtime performance by a factor of over 20 by rewriting performance-critical parts in C++',
+			'Increased UX by introducing a modern user interface, based on TypeScript and Angular',
+		],
 		image: 'electricity.png',
 		tech:
 			[
 				'Python', 'C++', 'Docker', 'Kubernetes',
-				'Helm', 'Azure DevOps'
+				'Helm', 'Azure DevOps', 'TypeScript', 'Angular'
 			],
 	},
 ];
@@ -50,8 +57,9 @@ const energyProjects: SuccessStory[] = [
 const healthcareProjects: SuccessStory[] = [
 	{
 		title: 'LLM-Enabled Medical Billing',
-		description:
+		description: [
 			'We built a system to automatically analyze medical documents and write medical bills. The system uses LLMs to retrieve billable services from unstructured medical documents and applies complex business rules to arrive at an invoice to be forwarded to the health insurer.',
+		],
 		image: 'bills.png',
 		tech:
 			[
@@ -59,25 +67,29 @@ const healthcareProjects: SuccessStory[] = [
 			],
 	},
 	{
-		title: 'Rehospitalization Risk Reduction',
-		description:
-			'We developed a readmission prediction model that identifies high-risk patients upon discharge, enabling targeted interventions that reduced 30-day rehospitalization rates by 22% and improved patient outcomes across the network.',
+		title: 'Rehospitalisation Risk Reduction',
+		description: [
+			'Developed a system for predicting the expected duration of individual patients’ stay in the hospital',
+			'Used data from over 100 hospitals over several years',
+			'System is used to improve capacity planning',
+		],
 		image: 'hospital_beds.png',
 		tech:
 			[
-				'Python', 'TensorFlow', 'Kubernetes',
-				'Docker', 'Azure', 'MLflow'
+				'Python', 'Machine Learning', 'PostgreSQL'
 			],
 	},
 	{
 		title: 'Hospital Resource Planning',
-		description:
-			'We engineered a predictive analytics system that optimizes hospital resource allocation, forecasting patient admissions and staff requirements to ensure optimal bed and personnel utilization across multi-site healthcare networks.',
+		description: [
+			'Analysed patient data to predict the probability of a patient being re-hospitalised due to chronic illness',
+			'Resulting system generate significantly better predictions than existing benchmark system',
+			'Prediction system enables better planning'
+		],
 		image: 'hospital.png',
 		tech:
 			[
-				'Python', 'Machine Learning', 'PostgreSQL',
-				'Golang', 'AWS', 'xgboost', 'DevOps'
+				'Python', 'Machine Learning', 'PostgreSQL'
 			],
 	},
 ];
@@ -85,26 +97,33 @@ const healthcareProjects: SuccessStory[] = [
 const automotiveProjects: SuccessStory[] = [
 	{
 		title:
-			'Customer Churn Prediction for German Automotive Manufacturer',
-		description:
-			'For one of Germany\'s largest automotive manufacturers, we built a real-time customer churn prediction system analyzing over 5 million vehicle ownership records. The model identifies customers at risk of switching brands, enabling targeted retention campaigns that reduced churn by 18% and saved an estimated €12M annually in lost sales.',
+			'Customer Churn (European Country)',
+		description: [
+			'Predicted customer loyalty in sales and aftersales for every single customer in one of the biggest European markets',
+			'Built large set of relational features',
+			'Productionised the successful prototype using AWS, from ETL to connecting the pipeline to SAP/CRM',
+			'System enables targeted use of resources for all sales and aftersales campaigns in this large European country',
+			'Significant increase in customer loyalty'
+
+		],
 		image: 'cars.png',
 		tech:
 			[
-				'Python', 'TensorFlow', 'Kubernetes',
-				'Docker', 'GCP', 'BigQuery'
+				'Python', 'Machine Learning', 'PostgreSQL', 'AWS', 'Airflow', 'Jenkins', 'Docker', 'SAP/CRM'
 			],
 	},
 	{
 		title:
-			'Dealer Network Churn Analysis for U.S. Automotive Group',
-		description:
-			'We engineered a predictive churn model for a major U.S. automotive dealership group spanning 200+ locations. By fusing service history, financing data, and competitor pricing signals, the system flags at-risk customers with a 6-month lead time. Result: a 24% increase in repeat service bookings and a 15% uplift in parts revenue across the network.',
+			'Customer Churn (Non-European Country)',
+		description: [
+			'Developed a system for predicting customer loyalty in aftersales for every single customer in a large non-European country',
+			'Built ETL processes and relational features',
+			'System enables targeted use of resources for all aftersales campaigns in this large non-European country'
+		],
 		image: 'cars2.png',
 		tech:
 			[
-				'Python', 'XGBoost', 'AWS', 'SageMaker',
-				'PostgreSQL', 'dbt'
+				'Python', 'Machine Learning', 'sqlite',
 			],
 	},
 ];
@@ -112,24 +131,27 @@ const automotiveProjects: SuccessStory[] = [
 const retailProjects: SuccessStory[] = [
 	{
 		title: 'Product Return Prediction in Online Retail',
-		description:
-			'We built a machine learning system to predict product returns for a major online retailer, analyzing customer behavior, product metadata, and historical return patterns. The model reduced return processing costs by 28% and helped the retailer proactively improve product descriptions and sizing guides.',
+		description: [
+			'...'
+		],
 		image: 'ecommerce.png',
 		tech:
 			[
-				'Python', 'XGBoost', 'AWS', 'S3',
-				'PostgreSQL', 'Airflow'
+				'Python', 'Machine Learning', 'MySQL',
 			],
 	},
 	{
 		title: 'Sales Prediction',
-		description:
-			'We engineered a time-series forecasting pipeline for demand prediction across 10,000+ SKU categories for a multi-channel retailer. The model integrates seasonality, promotions, and macroeconomic signals to produce weekly sales forecasts, improving inventory accuracy by 34% and reducing stockouts by 41%.',
+		description: [
+			'Developed a system for sales prediction to optimise worldwide warehousing and logistics',
+			'Built features using self-developed algorithms for automated feature engineering, benchmarked against established manual features',
+			'Resulting automatic features generate significantly better predictions than the existing prediction system',
+			'Prediction system enables considerably better planning'
+		],
 		image: 'store.png',
 		tech:
 			[
-				'Python', 'TensorFlow', 'Kubernetes',
-				'Docker', 'GCP', 'BigQuery', 'Looker'
+				'Python', 'Machine Learning', 'PostgreSQL',
 			],
 	},
 ];
@@ -137,8 +159,11 @@ const retailProjects: SuccessStory[] = [
 const serviceProjects: SuccessStory[] = [
 	{
 		title: 'Customer Reactivation',
-		description:
-			'We built a machine learning engine that identifies dormant customers and predicts the optimal reactivation channel and incentive for each individual. Deployed across multiple service verticals, the system reactivated 12% of churned customers within 90 days, generating an estimated €3.2M in recovered revenue.',
+		description: [
+			'Developed a prediction system for customer reactivation using machine learning',
+			'Evaluated the system using A/B testing on several ten thousand customers',
+			'As a result, prediction system triples the return of investment (ROI) on such marketing campaigns as evidenced by the result of the A/B testing'
+		],
 		image: 'lottery.png',
 		tech:
 			[
@@ -148,13 +173,17 @@ const serviceProjects: SuccessStory[] = [
 	},
 	{
 		title: 'Digitally Enabled Audit',
-		description:
-			'We transformed a traditional audit workflow into a fully digital, data-driven platform that automates evidence collection, risk assessment, and compliance reporting. By replacing manual processes with intelligent automation, the firm reduced audit cycle times by 45% while achieving 99.7% data accuracy across all reporting lines.',
+		description: [
+			'Designed and developed tools and components for ETL, integration and processing to be used for auditing businesses',
+			'Established best-practice coding standards within the software development team',
+			'Significantly improved code quality and maintainability of the existing codebase',
+			'Introduced static typing, static code analysis and functional-style programming to the Python code',
+			'The developed component for extracting data from SAP is now being used for auditing businesses world-wide'
+		],
 		image: 'audit.png',
 		tech:
 			[
-				'Python', 'Machine Learning', 'PostgreSQL',
-				'AWS', 'DevOps', 'Tableau'
+				'Python', 'SAP S4/HANA', 'ABAP', 'Docker'
 			],
 	},
 ];
@@ -162,13 +191,16 @@ const serviceProjects: SuccessStory[] = [
 const roboticsProjects: SuccessStory[] = [
 	{
 		title: 'Predictive Maintenance',
-		description:
-			'We deployed an AI-powered predictive maintenance system for an industrial manufacturing line, using sensor data and machine learning to forecast equipment failures up to 14 days in advance. The system reduced unplanned downtime by 37%, saving approximately €2.1M annually in lost production and emergency repair costs.',
+		description: [
+			'Developed a predictive maintenance system based on sensor data collected from production machinery for optical components deployed worldwide (~300 GB)',
+			'Built features using self-developed algorithms for automated feature engineering, benchmarked against established manual features',
+			'Resulting automatic features generate significantly better predictions while taking considerably less time to build',
+			'System enables considerably better predictions than before'
+		],
 		image: 'robot_arm.png',
 		tech:
 			[
-				'Python', 'TensorFlow', 'IoT',
-				'Kubernetes', 'AWS', 'Grafana'
+				'Python', 'Machine Learning', 'PostgreSQL'
 			],
 	},
 ];
