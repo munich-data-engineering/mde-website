@@ -78,7 +78,7 @@ const healthcareProjects: SuccessStory[] = [
 		title: 'Hospital Resource Planning',
 		description: [
 			'Analysed patient data to predict the probability of a patient being re-hospitalised due to chronic illness',
-			'Resulting system generate significantly better predictions than existing benchmark system',
+			'Resulting system generates significantly better predictions than existing benchmark system',
 			'Prediction system enables better planning'
 		],
 		image: 'hospital.png',
@@ -125,7 +125,7 @@ const retailProjects: SuccessStory[] = [
 		description: [
 			'Developed a system for predicting online return in online retail',
 			'System predicts the likelihood of a product being returned as customer is putting together the virtual shopping basket',
-			'Enables intervention strategies when the likelihood of a product return is deemed to high',
+			'Enables intervention strategies when the likelihood of a product return is deemed to be too high',
 			'Estimated six-digit savings'
 		],
 		image: 'ecommerce.png',
