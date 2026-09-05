@@ -11,7 +11,7 @@
   display: flex;
   gap: 6px;
   align-items: stretch;
-  max-width: calc(100vw * 0.6);
+  max-width: 1920px;
   margin: 0 auto;
   padding: 0 48px;
 }
