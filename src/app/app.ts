@@ -234,14 +234,14 @@ const repos: Repo[] = [
 		    'https://github.com/getml/sqlgen/blob/main/docs/README.md',
 		status: 'Stable',
 	},
-	{
+	/*{
 		name: 'ts-simd',
 		description:
-		    'Lightweight library for deploying and serving ML models at scale with automatic scaling and A/B testing support.',
-		tech: ['Python', 'C++', 'time series', 'machine learning'],
-		link: 'https://github.com/munich-data-eng/ml-serving-lib',
-		status: 'Beta',
-	},
+		    'Lightweight library for deploying and serving ML models at
+	scale with automatic scaling and A/B testing support.', tech: ['Python',
+	'C++', 'time series', 'machine learning'], link:
+	'https://github.com/munich-data-eng/ml-serving-lib', status: 'Beta',
+	},*/
 ];
 
 @Component({
