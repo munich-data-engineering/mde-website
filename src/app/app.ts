@@ -230,8 +230,7 @@ const repos: Repo[] = [
 		    'sqlgen is a reflection-based ORM and SQL query generator for C++-20, similar to Python\'s SQLAlchemy/SQLModel or Rust\'s Diesel.',
 		tech: ['C++', 'PostgreSQL', 'MySQL', 'sqlite', 'DuckDB'],
 		link: 'https://github.com/getml/sqlgen',
-		docs:
-		    'https://github.com/getml/sqlgen/blob/main/docs/README.md',
+		docs: 'https://getml.github.io/sqlgen/',
 		status: 'Stable',
 	},
 	/*{
