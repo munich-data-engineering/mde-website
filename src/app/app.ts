@@ -203,7 +203,7 @@ const accountingProjects: SuccessStory[] = [
 
 ];
 
-const roboticsProjects: SuccessStory[] = [
+const otherProjects: SuccessStory[] = [
 	{
 		title: 'Predictive Maintenance',
 		description: [
@@ -214,6 +214,21 @@ const roboticsProjects: SuccessStory[] = [
 		],
 		image: 'robot_arm.png',
 		tech: ['Python', 'Machine Learning', 'PostgreSQL'],
+	},
+	{
+		title: 'LLM-Powered Document Anonymisation',
+		description: [
+			'Built a system to automatically redact sensitive personal information from documents',
+			'System uses LLMs and Natural Language Processing to identify sensitive personal information',
+			'Used LLMs are hosted in a GDPR-compliant manner',
+			'Resulting system allows for the upload of PDF files, often containing hundreds of pages, and reliably returns a fully redacted version',
+			'Even works for handwritten comments'
+		],
+		image: 'redactions.png',
+		tech: [
+			'Python', 'LLM', 'OCR', 'langchain', 'RabbitMQ',
+			'Kubernetes', 'Helm'
+		],
 	},
 ];
 
@@ -236,14 +251,6 @@ const repos: Repo[] = [
 		docs: 'https://getml.github.io/sqlgen/',
 		status: 'Stable',
 	},
-	/*{
-		name: 'ts-simd',
-		description:
-		    'Lightweight library for deploying and serving ML models at
-	scale with automatic scaling and A/B testing support.', tech: ['Python',
-	'C++', 'time series', 'machine learning'], link:
-	'https://github.com/munich-data-eng/ml-serving-lib', status: 'Beta',
-	},*/
 ];
 
 @Component({
@@ -264,7 +271,7 @@ export class App {
 
 	readonly tabNames = [
 		'Energy', 'Healthcare', 'Automotive', 'Retail',
-		'Customer Service', 'Accounting', 'Robotics'
+		'Customer Service', 'Accounting', 'Other'
 	];
 
 	getSuccessStories(tabName: string): SuccessStory[] {
@@ -286,8 +293,8 @@ export class App {
 		} else if (tabName === 'Accounting') {
 			return accountingProjects;
 
-		} else if (tabName === 'Robotics') {
-			return roboticsProjects;
+		} else if (tabName === 'Other') {
+			return otherProjects;
 		}
 		return [];
 	}
