@@ -288,9 +288,4 @@ export class App {
 		}
 		return [];
 	}
-
-	onSubmit() {
-		alert(
-		    'Message sent! (hook up your backend or mailto handler here)');
-	}
 }
