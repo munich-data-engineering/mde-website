@@ -1,0 +1,14 @@
+FROM node:22-slim
+
+WORKDIR /app
+
+COPY dist/mde_website/server/package*.json ./
+RUN npm ci --omit=dev
+
+COPY dist/mde_website/server/. ./
+
+ENV PORT=8080
+
+EXPOSE 8080
+
+CMD ["node", "server.mjs"]

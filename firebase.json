@@ -1,0 +1,48 @@
+{
+  "hosting": [
+    {
+      "site": "mde-website",
+      "public": "dist/mde_website/browser",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "run": {
+            "serviceId": "mde-website",
+            "region": "us-central1"
+          }
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(js|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            }
+          ]
+        },
+        {
+          "source": "/**/index.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "predeploy": ["npm run build"]
+    }
+  ],
+  "functions": {
+    "source": "dist/mde_website/server",
+    "codebase": "default",
+    "ignore": ["node_modules", ".git", "firebase-debug.log", "firebase-debug-gdpr.log", "lastest-debug.log"],
+    "predeploy": ["rm -rf functions && mkdir -p functions/server && cp -r ../dist/mde_website/server/* functions/server/"],
+    "runtime": "nodejs22"
+  }
+}
