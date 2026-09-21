@@ -27,7 +27,7 @@ const energyProjects: SuccessStory[] = [
 		title: 'Gas Market Model',
 		description: [
 			'Project was commissioned in the wake of the war in Ukraine',
-			'Developed machine learning system for predicting all critical components of the gas market',
+			'Developed a machine learning system for predicting all critical components of the gas market',
 			'System was developed from scratch: ETL, Data collection, modelling, productive implementation, cloud orchestration, frontend',
 			'System reliably delivers predictions on a daily basis'
 		],
@@ -68,10 +68,10 @@ const healthcareProjects: SuccessStory[] = [
 		],
 	},
 	{
-		title: 'Rehospitalisation Risk Reduction',
+		title: 'Readmission Risk Reduction',
 		description: [
-			'Developed a system for predicting the expected duration of individual patients’ stay in the hospital',
-			'Used data from over 100 hospitals over several years',
+			'Developed a system for predicting the expected duration of each patient\'s stay in hospital',
+			'Used data from over 100 hospitals over multiple years',
 			'System is used to improve capacity planning',
 		],
 		image: 'hospital_beds.png',
@@ -80,9 +80,9 @@ const healthcareProjects: SuccessStory[] = [
 	{
 		title: 'Hospital Resource Planning',
 		description: [
-			'Analysed patient data to predict the probability of a patient being re-hospitalised due to chronic illness',
-			'Resulting system generates significantly better predictions than existing benchmark system',
-			'Prediction system enables better planning'
+			'Analysed patient data to predict the probability of a patient being rehospitalised due to chronic illness',
+			'Resulting system generates significantly better predictions than the existing benchmark system',
+			'Prediction system enables a better planning process'
 		],
 		image: 'hospital.png',
 		tech: ['Python', 'Machine Learning', 'PostgreSQL'],
@@ -91,14 +91,12 @@ const healthcareProjects: SuccessStory[] = [
 
 const automotiveProjects: SuccessStory[] = [
 	{
-		title: 'Customer Churn (European Country)',
+		title: 'Customer Churn in a Large European Market',
 		description: [
-			'Predicted customer loyalty in sales and aftersales for every single customer in one of the biggest European markets',
-			'Built large set of relational features',
+			'Predicted customer loyalty across sales and aftersales for every single customer in one of Europe\'s largest markets',
+			'Built a large set of relational features',
 			'Productionised the successful prototype using AWS, from ETL to connecting the pipeline to SAP/CRM',
-			'System enables targeted use of resources for all sales and aftersales campaigns in this large European country',
-			'Significant increase in customer loyalty'
-
+			'The system enables targeted use of resources for all sales and aftersales campaigns in this large European country',
 		],
 		image: 'cars.png',
 		tech: [
@@ -107,11 +105,11 @@ const automotiveProjects: SuccessStory[] = [
 		],
 	},
 	{
-		title: 'Customer Churn (Non-European Country)',
+		title: 'Customer Churn in a Large Non-European Market',
 		description: [
-			'Developed a system for predicting customer loyalty in aftersales for every single customer in a large non-European country',
+			'Developed a prediction system for customer loyalty in aftersales for every single customer in a large non-European country',
 			'Built ETL processes and relational features',
-			'System enables targeted use of resources for all aftersales campaigns in this large non-European country'
+			'The system enables targeted use of resources for all aftersales campaigns in this large non-European country'
 		],
 		image: 'cars2.png',
 		tech: [
@@ -126,10 +124,10 @@ const retailProjects: SuccessStory[] = [
 	{
 		title: 'Product Return Prediction in Online Retail',
 		description: [
-			'Developed a system for predicting online return in online retail',
-			'System predicts the likelihood of a product being returned as customer is putting together the virtual shopping basket',
-			'Enables intervention strategies when the likelihood of a product return is deemed to be too high',
-			'Estimated six-digit savings'
+			'Developed a system for predicting product returns for online retailers',
+			'The system predicts the likelihood of a product being returned as the customer assembles their virtual shopping basket',
+			'This enables intervention strategies when the likelihood of a product return is deemed to be too high',
+			'Achieved an estimated six-figure saving'
 		],
 		image: 'ecommerce.png',
 		tech: [
@@ -142,7 +140,7 @@ const retailProjects: SuccessStory[] = [
 	{
 		title: 'Sales Prediction',
 		description: [
-			'Developed a system for sales prediction to optimise worldwide warehousing and logistics',
+			'Developed a system for sales prediction to optimise global warehousing and logistics',
 			'Built features using self-developed algorithms for automated feature engineering, benchmarked against established manual features',
 			'Resulting automatic features generate significantly better predictions than the existing prediction system',
 			'Prediction system enables considerably better planning'
@@ -161,8 +159,7 @@ const customerServiceProjects: SuccessStory[] = [
 		title: 'Customer Reactivation',
 		description: [
 			'Developed a prediction system for customer reactivation of a German state-owned lottery using machine learning',
-			'Evaluated the system using A/B testing on several ten thousand customers',
-			'As a result, prediction system triples the return of investment (ROI) on such marketing campaigns as evidenced by the result of the A/B testing'
+			'Evaluated the system using A/B testing on tens of thousands of customers',
 		],
 		image: 'lottery.png',
 		tech: [
@@ -171,11 +168,10 @@ const customerServiceProjects: SuccessStory[] = [
 		],
 	},
 	{
-
-		title: 'Customer Churn in Real Estate',
+		title: 'Tenant Churn Prediction in Real Estate',
 		description: [
 			'Developed a prediction system for tenants cancelling their contracts',
-			'Resulting prediction system enables better planning',
+			'Resulting prediction system enables a better planning process',
 		],
 		image: 'real_estate.png',
 		tech: [
@@ -186,7 +182,6 @@ const customerServiceProjects: SuccessStory[] = [
 ];
 
 const accountingProjects: SuccessStory[] = [
-
 	{
 		title: 'Digitally Enabled Audit',
 		description: [
@@ -194,12 +189,11 @@ const accountingProjects: SuccessStory[] = [
 			'Established best-practice coding standards within the software development team',
 			'Significantly improved code quality and maintainability of the existing codebase',
 			'Introduced static typing, static code analysis and functional-style programming to the Python code',
-			'The developed component for extracting data from SAP is now being used for auditing businesses world-wide'
+			'The developed component for extracting data from SAP is now being used for auditing businesses worldwide',
 		],
 		image: 'audit.png',
 		tech: ['Python', 'SAP S4/HANA', 'ABAP', 'Docker'],
 	},
-
 
 ];
 
@@ -220,7 +214,7 @@ const otherProjects: SuccessStory[] = [
 		description: [
 			'Built a system to automatically redact sensitive personal information from documents',
 			'System uses LLMs and Natural Language Processing to identify sensitive personal information',
-			'Used LLMs are hosted in a GDPR-compliant manner',
+			'The LLMs used are hosted in a GDPR-compliant manner',
 			'Resulting system allows for the upload of PDF files, often containing hundreds of pages, and reliably returns a fully redacted version',
 			'Even works for handwritten comments'
 		],
