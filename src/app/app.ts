@@ -62,7 +62,10 @@ const healthcareProjects: SuccessStory[] = [
 			'Applies complex business rules to arrive at an invoice to be forwarded to the health insurer',
 		],
 		image: 'bills.png',
-		tech: ['Python', 'LLM', 'langchain', 'RabbitMQ'],
+		tech: [
+			'Python', 'LLM', 'langchain', 'RabbitMQ', 'Kubernetes',
+			'Helm'
+		],
 	},
 	{
 		title: 'Rehospitalisation Risk Reduction',
