@@ -27,6 +27,8 @@ jobs:
     - name: Deploy to Firebase Hosting
       run: |
         firebase deploy --non-interactive --debug
+      env:
+        GOOGLE_APPLICATION_CREDENTIALS: google-application-credentials.json
 
     - name: Remove credentials file
       if: always()
