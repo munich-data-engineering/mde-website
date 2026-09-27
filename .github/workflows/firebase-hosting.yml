@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build_and_deploy:
@@ -14,23 +11,15 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
-    - name: Install Firebase CLI
-      run: npm install -g firebase-tools
+    - name: Authenticate to Google Cloud
+      uses: google-github-actions/auth@v2
+      with:
+        credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
 
-    - name: Prepare Google Application Credentials
-      shell: bash
-      run: |
-        echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}" > "google-application-credentials.json"
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v2
 
-    - name: Deploy to Firebase Hosting
-      run: |
-        firebase deploy --non-interactive --debug
-      env:
-        GOOGLE_APPLICATION_CREDENTIALS: google-application-credentials.json
-
-    - name: Remove credentials file
-      if: always()
-      run: |
-        rm google-application-credentials.json
+    - name: Deploy to Firebase App Hosting
+      run: gcloud app deploy --project=mde-website-ec8f2
