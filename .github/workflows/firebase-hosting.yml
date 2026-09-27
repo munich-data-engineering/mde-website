@@ -29,6 +29,6 @@ jobs:
         firebase deploy --non-interactive --debug
 
     - name: Remove credentials file
-        if: always()
+        if: success() || failure()
         run: |
           rm google-application-credentials.json
