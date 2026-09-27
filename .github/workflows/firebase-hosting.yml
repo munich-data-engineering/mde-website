@@ -20,6 +20,8 @@ jobs:
       run: npm install -g firebase-tools
 
     - name: Deploy to Firebase Hosting
-      run: firebase deploy
+      run: |
+        firebase login
+        firebase deploy
       env:
         GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
