@@ -46,6 +46,23 @@ npm run ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimises your application for performance and speed.
 
+## Deployment
+
+> **Note:** Manual deployment is not required. An automated pipeline deploys the site on every push to `main`. The instructions below are provided for reference or manual overrides.
+
+To deploy manually using Firebase, first install the Firebase CLI:
+
+```bash
+npm install -g firebase-tools
+```
+
+Then log in and deploy:
+
+```bash
+firebase login
+firebase deploy
+```
+
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
