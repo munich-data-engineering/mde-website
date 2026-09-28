@@ -845,6 +845,7 @@
     max-height: 360px;
   }
 }
+
 @media (max-width: 900px) {
   .competencies-grid {
     grid-template-columns: 1fr;
@@ -862,23 +863,63 @@
   }
 
   .hero-title {
-    font-size: 36px;
+    font-size: 52px;
   }
 
   .hero-subtitle {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .section-title {
-    font-size: 32px;
+    font-size: 34px;
   }
 
   .section-desc {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .competencies-intro {
-    font-size: 20px;
+    font-size: 19px;
+  }
+
+  .repo-name {
+    font-size: 26px;
+  }
+
+  .repo-desc {
+    font-size: 19px;
+  }
+
+  .repo-status {
+    font-size: 10px;
+  }
+
+  .tech-badge {
+    font-size: 12px;
+  }
+
+  .project-title {
+    font-size: 26px;
+  }
+
+  .project-desc {
+    font-size: 17px;
+  }
+
+  .success-story-card-title {
+    font-size: 26px;
+  }
+
+  .success-story-card-desc {
+    font-size: 17px;
+  }
+
+  .quality-card-title {
+    font-size: 26px;
+  }
+
+  .quality-card-desc {
+    font-size: 17px;
   }
 
   .hero-image-card {
@@ -886,19 +927,17 @@
     max-height: 300px;
   }
 }
-
-
 @media (max-width: 600px) {
   .hero-content {
     padding: 20px;
   }
 
   .hero-title {
-    font-size: 28px;
+    font-size: 36px;
   }
 
   .hero-subtitle {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .hero-btn {
@@ -907,7 +946,15 @@
   }
 
   .section-title {
-    font-size: 24px;
+    font-size: 28px;
+  }
+
+  .section-desc {
+    font-size: 20px;
+  }
+
+  .competencies-intro {
+    font-size: 17px;
   }
 
   .competency-icon {
@@ -920,12 +967,56 @@
     font-size: 22px;
   }
 
+  .competency-desc {
+    font-size: 17px;
+  }
+
+  .repo-name {
+    font-size: 22px;
+  }
+
+  .repo-desc {
+    font-size: 17px;
+  }
+
+  .repo-status {
+    font-size: 10px;
+  }
+
+  .tech-badge {
+    font-size: 11px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+
+  .project-desc {
+    font-size: 17px;
+  }
+
+  .success-story-card-title {
+    font-size: 22px;
+  }
+
+  .success-story-card-desc {
+    font-size: 17px;
+  }
+
+  .quality-card-title {
+    font-size: 22px;
+  }
+
+  .quality-card-desc {
+    font-size: 17px;
+  }
+
   .contact-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .contact-desc {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .hero-image-card {
