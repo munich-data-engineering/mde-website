@@ -28,7 +28,7 @@ const energyProjects: SuccessStory[] = [
 		description: [
 			'Project was commissioned in the wake of the war in Ukraine',
 			'Developed a machine learning system for predicting all critical components of the gas market',
-			'System was developed from scratch: ETL, Data collection, modelling, productive implementation, cloud orchestration, frontend',
+			'System was developed from scratch: ETL, data collection, production implementation, cloud orchestration, frontend',
 			'System reliably delivers predictions on a daily basis'
 		],
 		image: 'gas_pipelines.png',
@@ -230,7 +230,7 @@ const repos: Repo[] = [
 	{
 		name: 'reflect-cpp',
 		description:
-		    'reflect-cpp is a C++-20/C++-26 library for fast serialization, deserialization and validation using reflection, similar to pydantic in Python, serde in Rust, encoding in Go or aeson in Haskell.',
+		    'reflect-cpp is a C++-20/C++-26 library for fast serialisation, deserialisation and validation using reflection, similar to pydantic in Python, serde in Rust, encoding in Go or aeson in Haskell.',
 		tech: ['C++', 'JSON', 'msgpack', 'parquet', 'XML', 'Avro'],
 		link: 'https://github.com/getml/reflect-cpp',
 		docs: 'https://rfl.getml.com/',
