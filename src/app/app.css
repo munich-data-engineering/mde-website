@@ -40,7 +40,7 @@
   color: #ffb57e;
   font-size: 14px;
   font-weight: 500;
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   padding: 6px 16px;
   border-radius: 20px;
   width: fit-content;
@@ -50,7 +50,7 @@
 
 .hero-title {
   font-family: 'Google Sans', sans-serif;
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1.1;
   color: var(--mat-sys-onSurface);
@@ -62,7 +62,7 @@
   font-size: 24px;
   line-height: 1.6;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   margin: 0;
   max-width: 480px;
 }
@@ -81,7 +81,7 @@
   border-radius: 50px;
   font-size: 22px;
   font-weight: 500;
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   text-decoration: none;
   transition: all 0.2s ease;
   letter-spacing: 0.3px;
@@ -145,7 +145,7 @@
 .section-desc {
   font-size: 28px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   margin: 0;
 }
 
@@ -170,7 +170,7 @@
   text-align: center;
   font-size: 28px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   margin: 0 0 48px;
   line-height: 1.7;
   max-width: 800px;
@@ -217,7 +217,7 @@
 .competency-desc {
   font-size: 22px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   line-height: 1.7;
   margin: 0;
 }
@@ -266,7 +266,7 @@
    We must set it explicitly. */
 .mde-tabs .mdc-tab__text-label {
   color: var(--mat-sys-onSurfaceVariant) !important;
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   font-size: 18px !important;
   font-weight: 500 !important;
   letter-spacing: 0.2px !important;
@@ -340,7 +340,7 @@
   padding: 4px 12px;
   border-radius: 12px;
   white-space: nowrap;
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
 }
 
 .status-done {
@@ -363,7 +363,7 @@
   line-height: 1.6;
   color: var(--mat-sys-onSurfaceVariant);
   margin: 0 0 16px;
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
 }
 
 .project-meta {
@@ -379,7 +379,7 @@
   gap: 6px;
   font-size: 13px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
 }
 
 .project-meta-icon {
@@ -404,14 +404,14 @@
   padding: 4px 12px;
   border-radius: 8px;
   letter-spacing: 0.3px;
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
 }
 
 .tech-badge-outline {
   background: transparent;
   color: var(--mat-sys-onSurfaceVariant);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
 }
 
 /* ==============================
@@ -602,15 +602,15 @@
   padding: 3px 10px;
   border-radius: 10px;
   white-space: nowrap;
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
 }
 
 .repo-desc {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
   color: var(--mat-sys-onSurfaceVariant);
   margin: 0;
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .repo-actions {
@@ -626,7 +626,7 @@
   font-size: 14px;
   font-weight: 500;
   color: #ff8c3e;
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -669,7 +669,7 @@
 .contact-desc {
   font-size: 28px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   margin: 0 0 48px;
   line-height: 1.6;
 }
@@ -695,7 +695,7 @@
   border-radius: 12px;
   font-size: 16px;
   color: var(--mat-sys-onSurface);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
@@ -725,7 +725,7 @@
   color: #000000;
   font-size: 16px;
   font-weight: 600;
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -780,7 +780,7 @@
 .footer-tagline {
   font-size: 14px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   margin: 0;
 }
 
@@ -794,7 +794,7 @@
 .footer-link {
   font-size: 14px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -806,7 +806,7 @@
 .footer-copy {
   font-size: 13px;
   color: var(--mat-sys-onSurfaceMedium);
-  font-family: Roboto, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   opacity: 0.6;
   margin: 0;
 }
