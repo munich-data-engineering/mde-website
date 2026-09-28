@@ -845,10 +845,52 @@
     max-height: 360px;
   }
 }
+@media (max-width: 900px) {
+  .competencies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .success-story-grid-two-cards,
+  .success-story-grid-three-cards,
+  .quality-grid,
+  .opensource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 28px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-desc {
+    font-size: 22px;
+  }
+
+  .competencies-intro {
+    font-size: 20px;
+  }
+
+  .hero-image-card {
+    min-height: 240px;
+    max-height: 300px;
+  }
+}
+
 
 @media (max-width: 600px) {
   .hero-content {
-    padding: 24px;
+    padding: 20px;
   }
 
   .hero-title {
@@ -859,52 +901,35 @@
     font-size: 15px;
   }
 
-  .hero-actions {
-    flex-direction: column;
-  }
-
   .hero-btn {
-    width: 100%;
-    justify-content: center;
+    padding: 14px 28px;
+    font-size: 18px;
   }
 
   .section-title {
-    font-size: 28px;
-  }
-
-  .project-grid,
-  .opensource-grid,
-  .quality-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-links {
-    gap: 20px;
-  }
-
-  .competencies-section {
-    padding: 40px 16px;
-  }
-
-  .competency-card {
-    padding: 32px 20px;
+    font-size: 24px;
   }
 
   .competency-icon {
-    font-size: 40px;
-    width: 40px;
-    height: 40px;
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
   }
 
-  .contact-row {
-    grid-template-columns: 1fr;
+  .competency-title {
+    font-size: 22px;
   }
 
   .contact-title {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .contact-desc {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .hero-image-card {
+    min-height: 180px;
+    max-height: 240px;
   }
 }
