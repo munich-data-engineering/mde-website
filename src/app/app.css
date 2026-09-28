@@ -215,7 +215,7 @@
 }
 
 .competency-desc {
-  font-size: 18px;
+  font-size: 22px;
   color: var(--mat-sys-onSurfaceVariant);
   font-family: Roboto, sans-serif !important;
   line-height: 1.7;
@@ -467,7 +467,7 @@
 
 .success-story-card-desc {
   font-family: 'Google Sans', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   color: var(--mat-sys-onSurfaceVariant);
   margin: 0 0 16px;
@@ -527,10 +527,12 @@
 
 .quality-card-desc {
   font-family: 'Google Sans', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
   color: var(--mat-sys-onSurfaceVariant);
   margin: 0 0 16px;
+  margin-left: 28px;
+  margin-right: 28px;
 }
 
 /* ==============================
