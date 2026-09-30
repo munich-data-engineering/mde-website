@@ -150,7 +150,7 @@
 
   <mat-tab-group class="mde-tabs" animationDuration="200ms" [(selectedIndex)]="activeTab">
     @for (tab of tabNames; track tab) {
-    <mat-tab [label]="tab">
+    <mat-tab class="tab-label" [label]="tab">
       <div class="tab-content">
         <div
           [class]="getSuccessStories(tab).length === 3? 'success-story-grid-three-cards': 'success-story-grid-two-cards'">
@@ -177,7 +177,27 @@
   </mat-tab-group>
 </section>
 
-<!-- Contact Section -->
+<!-- People Section -->
+<section class="people-section">
+  <div class="section-header">
+    <p class="section-desc">Meet the mind behind Munich Data Engineering.</p>
+  </div>
+
+  <div class="people-content">
+    <mat-card class="person-card mdc-elevation-1">
+      <mat-card-content class="person-card-content">
+        <div class="person-avatar">
+          <img src="/img/patrick.jpg" alt="Patrick Urbanke" class="person-avatar-img" />
+        </div>
+        <h3 class="person-name">Dr. Patrick Urbanke</h3>
+        <p class="person-role">Founder</p>
+        <p class="person-bio">
+          Patrick began programming before the age of 10 and brings over 25 years of programming experience, including more than 10 years leading data-driven software projects in industry. Fluent in German, English, and Mandarin Chinese, he holds a doctorate in machine learning — completed <em>summa cum laude</em> as the fastest student in his institute's history — and brings a research-driven approach to every engagement, ensuring the code we ship is not just functional, but fundamentally sound.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
 <section class="contact-section">
   <div class="section-header">
     <p class="section-desc">If you are interested or want to learn more, please contact us:</p>
