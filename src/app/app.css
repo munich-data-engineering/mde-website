@@ -39,8 +39,8 @@
   background: rgba(255, 140, 62, 0.12);
   color: #ffb57e;
   font-size: 14px;
-  font-weight: 500;
-  font-family: 'Google Sans', sans-serif !important;
+  font-weight: 700;
+  font-family: 'Google Sans Text', sans-serif !important;
   padding: 6px 16px;
   border-radius: 20px;
   width: fit-content;
@@ -49,7 +49,7 @@
 }
 
 .hero-title {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 50px;
   font-weight: 700;
   line-height: 1.1;
@@ -59,12 +59,11 @@
 }
 
 .hero-subtitle {
-  font-size: 24px;
-  line-height: 1.6;
-  color: var(--mat-sys-onSurfaceVariant);
-  font-family: 'Google Sans', sans-serif !important;
-  margin: 0;
-  max-width: 480px;
+  font-family: 'Google Sans Text', sans-serif;
+  font-size: 30px;
+  color: var(--mat-sys-onSurface);
+  margin: 0 0 8px;
+  letter-spacing: -0.3px;
 }
 
 .hero-actions {
@@ -81,7 +80,7 @@
   border-radius: 50px;
   font-size: 22px;
   font-weight: 500;
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   text-decoration: none;
   transition: all 0.2s ease;
   letter-spacing: 0.3px;
@@ -134,7 +133,7 @@
 }
 
 .section-title {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: var(--mat-sys-onSurface);
@@ -145,7 +144,7 @@
 .section-desc {
   font-size: 28px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   margin: 0;
 }
 
@@ -170,7 +169,7 @@
   text-align: center;
   font-size: 28px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   margin: 0 0 48px;
   line-height: 1.7;
   max-width: 800px;
@@ -207,7 +206,7 @@
 }
 
 .competency-title {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 28px;
   font-weight: 700;
   color: var(--mat-sys-onSurface);
@@ -217,7 +216,7 @@
 .competency-desc {
   font-size: 22px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   line-height: 1.7;
   margin: 0;
 }
@@ -244,10 +243,15 @@
   --mat-tab-header-label-text-opacity: 1;
 }
 
-
 .mde-tabs .mat-mdc-tab-list {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+.mde-tabs .tab-label{
+  font-size: 18px !important;
+  font-family: 'Google Sans Text', sans-serif !important;
+  font-weight: 600;
+ }
 
 .mde-tabs .mdc-tab {
   min-width: 0 !important;
@@ -266,7 +270,7 @@
    We must set it explicitly. */
 .mde-tabs .mdc-tab__text-label {
   color: var(--mat-sys-onSurfaceVariant) !important;
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   font-size: 18px !important;
   font-weight: 500 !important;
   letter-spacing: 0.2px !important;
@@ -275,7 +279,7 @@
 
 .mde-tabs .mdc-tab--active .mdc-tab__text-label {
   color: #ff8c3e !important;
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   font-size: 18px !important;
 }
 
@@ -329,7 +333,7 @@
 }
 
 .project-title {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 28px;
   font-weight: 600;
   color: var(--mat-sys-onSurface);
@@ -343,7 +347,7 @@
   padding: 4px 12px;
   border-radius: 12px;
   white-space: nowrap;
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
 }
 
 .status-done {
@@ -366,7 +370,7 @@
   line-height: 1.6;
   color: var(--mat-sys-onSurfaceVariant);
   margin: 0 0 16px;
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
 }
 
 .project-meta {
@@ -382,7 +386,7 @@
   gap: 6px;
   font-size: 13px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
 }
 
 .project-meta-icon {
@@ -407,14 +411,14 @@
   padding: 4px 12px;
   border-radius: 8px;
   letter-spacing: 0.3px;
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
 }
 
 .tech-badge-outline {
   background: transparent;
   color: var(--mat-sys-onSurfaceVariant);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
 }
 
 /* ==============================
@@ -451,7 +455,7 @@
 }
 
 .success-story-card-title {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 28px;
   font-weight: 600;
   color: var(--mat-sys-onSurface);
@@ -469,7 +473,7 @@
 }
 
 .success-story-card-desc {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 20px;
   line-height: 1.6;
   color: var(--mat-sys-onSurfaceVariant);
@@ -521,7 +525,7 @@
 }
 
 .quality-card-title {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 28px;
   font-weight: 600;
   color: var(--mat-sys-onSurface);
@@ -529,13 +533,14 @@
 }
 
 .quality-card-desc {
-  font-family: 'Google Sans', sans-serif;
   font-size: 22px;
   line-height: 1.6;
   color: var(--mat-sys-onSurfaceVariant);
-  margin: 0 0 16px;
+  margin: 0;
+  font-family: 'Google Sans Text', sans-serif;
   margin-left: 28px;
   margin-right: 28px;
+  width: 500px;
 }
 
 /* ==============================
@@ -590,7 +595,7 @@
 }
 
 .repo-name {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 32px !important;
   font-weight: 600;
   color: var(--mat-sys-onSurface);
@@ -605,7 +610,7 @@
   padding: 3px 10px;
   border-radius: 10px;
   white-space: nowrap;
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
 }
 
 .repo-desc {
@@ -613,7 +618,7 @@
   line-height: 1.6;
   color: var(--mat-sys-onSurfaceVariant);
   margin: 0;
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
 }
 
 .repo-actions {
@@ -629,7 +634,7 @@
   font-size: 20px;
   font-weight: 500;
   color: #ff8c3e;
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -661,7 +666,7 @@
 }
 
 .contact-title {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: var(--mat-sys-onSurface);
@@ -672,7 +677,7 @@
 .contact-desc {
   font-size: 28px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   margin: 0 0 48px;
   line-height: 1.6;
 }
@@ -698,7 +703,7 @@
   border-radius: 12px;
   font-size: 16px;
   color: var(--mat-sys-onSurface);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
@@ -728,7 +733,7 @@
   color: #000000;
   font-size: 16px;
   font-weight: 600;
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -788,7 +793,7 @@
 }
 
 .person-name {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 28px;
   font-weight: 700;
   color: var(--mat-sys-onSurface);
@@ -798,7 +803,7 @@
 .person-role {
   font-size: 18px;
   color: #ff8c3e;
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   font-weight: 500;
   margin: 0 0 16px;
 }
@@ -807,7 +812,7 @@
   font-size: 20px;
   line-height: 1.7;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   text-align: center;
   margin: 0 0 28px;
 }
@@ -823,7 +828,7 @@
   gap: 6px;
   font-size: 14px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -843,12 +848,10 @@
    ============================== */
 
 .footer {
-  background: var(--mat-sys-surfaceContainerHighest);
+  background: var(--mat-sys-surfaceContainerHigh);
   border-radius: 16px;
   overflow: hidden;
   border: none;
-  box-shadow: var(--mat-sys-level1) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding: 60px 24px 40px;
 }
 
@@ -870,7 +873,7 @@
 }
 
 .footer-title {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans Text', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--mat-sys-onSurface);
@@ -880,7 +883,7 @@
 .footer-tagline {
   font-size: 14px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   margin: 0;
 }
 
@@ -894,7 +897,7 @@
 .footer-link {
   font-size: 14px;
   color: var(--mat-sys-onSurfaceVariant);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -906,7 +909,7 @@
 .footer-copy {
   font-size: 13px;
   color: var(--mat-sys-onSurfaceMedium);
-  font-family: 'Google Sans', sans-serif !important;
+  font-family: 'Google Sans Text', sans-serif !important;
   opacity: 0.6;
   margin: 0;
 }

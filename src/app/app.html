@@ -5,9 +5,9 @@
     <div class="hero-text-card mdc-elevation-2">
       <div class="hero-content">
         <p class="hero-title">{{ title() }}</p>
-        <p class="hero-subtitle">
+        <div class="hero-subtitle">
           We build data-driven software.
-        </p>
+        </div>
         <div class="hero-actions">
           <a href="#projects" class="hero-btn hero-btn-primary">Learn more</a>
         </div>
@@ -150,7 +150,8 @@
 
   <mat-tab-group class="mde-tabs" animationDuration="200ms" [(selectedIndex)]="activeTab">
     @for (tab of tabNames; track tab) {
-    <mat-tab class="tab-label" [label]="tab">
+    <mat-tab>
+      <ng-template mat-tab-label><div class="tab-label">{{ tab }}</div></ng-template>
       <div class="tab-content">
         <div
           [class]="getSuccessStories(tab).length === 3? 'success-story-grid-three-cards': 'success-story-grid-two-cards'">
