@@ -181,34 +181,7 @@ const customerServiceProjects: SuccessStory[] = [
 	}
 ];
 
-const accountingProjects: SuccessStory[] = [
-	{
-		title: 'Digitally Enabled Audit',
-		description: [
-			'Designed and developed tools and components for ETL, integration and processing to be used for auditing businesses',
-			'Established best-practice coding standards within the software development team',
-			'Significantly improved code quality and maintainability of the existing codebase',
-			'Introduced static typing, static code analysis and functional-style programming to the Python code',
-			'The developed component for extracting data from SAP is now being used for auditing businesses worldwide',
-		],
-		image: 'audit.png',
-		tech: ['Python', 'SAP S4/HANA', 'ABAP', 'Docker'],
-	},
-
-];
-
-const otherProjects: SuccessStory[] = [
-	{
-		title: 'Predictive Maintenance',
-		description: [
-			'Developed a predictive maintenance system based on sensor data collected from production machinery for optical components deployed worldwide (~300 GB)',
-			'Built features using self-developed algorithms for automated feature engineering, benchmarked against established manual features',
-			'Resulting automatic features generate significantly better predictions while taking considerably less time to build',
-			'System enables considerably better predictions than before'
-		],
-		image: 'robot_arm.png',
-		tech: ['Python', 'Machine Learning', 'PostgreSQL'],
-	},
+const dataPrivacyProjects: SuccessStory[] = [
 	{
 		title: 'LLM-Powered Document Anonymisation',
 		description: [
@@ -224,6 +197,43 @@ const otherProjects: SuccessStory[] = [
 			'Kubernetes', 'Helm'
 		],
 	},
+	{
+		title: 'Synthetic Document Generation',
+		description: [
+			'Generated realistic synthetic documents for training AI systems using LLMs',
+			'Addressed the scarcity of real documents containing highly sensitive and private information',
+			'Produced training data that preserves the structural and semantic properties of real documents without exposing any actual personal data',
+			'Avoids running afoul of data protection laws while still enabling effective AI model training'
+		],
+		image: 'document_generation.png',
+		tech: ['Python', 'LLM', 'langchain', 'Docker'],
+	},
+];
+
+const otherProjects: SuccessStory[] = [
+	{
+		title: 'Predictive Maintenance',
+		description: [
+			'Developed a predictive maintenance system based on sensor data collected from production machinery for optical components deployed worldwide (~300 GB)',
+			'Built features using self-developed algorithms for automated feature engineering, benchmarked against established manual features',
+			'Resulting automatic features generate significantly better predictions while taking considerably less time to build',
+			'System enables considerably better predictions than before'
+		],
+		image: 'robot_arm.png',
+		tech: ['Python', 'Machine Learning', 'PostgreSQL'],
+	},
+	{
+		title: 'Digitally Enabled Audit',
+		description: [
+			'Designed and developed tools and components for ETL, integration and processing to be used for auditing businesses',
+			'Established best-practice coding standards within the software development team',
+			'Significantly improved code quality and maintainability of the existing codebase',
+			'Introduced static typing, static code analysis and functional-style programming to the Python code',
+			'The developed component for extracting data from SAP is now being used for auditing businesses worldwide',
+		],
+		image: 'audit.png',
+		tech: ['Python', 'SAP S4/HANA', 'ABAP', 'Docker'],
+	},
 ];
 
 const repos: Repo[] = [
@@ -232,8 +242,8 @@ const repos: Repo[] = [
 		description:
 		    'reflect-cpp is a C++-20/C++-26 library for fast serialisation, deserialisation and validation using reflection, similar to pydantic in Python, serde in Rust, encoding in Go or aeson in Haskell.',
 		tech: ['C++', 'JSON', 'msgpack', 'parquet', 'XML', 'Avro'],
-		link: 'https://github.com/getml/reflect-cpp',
-		docs: 'https://rfl.getml.com/',
+		link: 'https://github.com/munich-data-engineering/reflect-cpp',
+		docs: 'https://munich-data-engineering.github.io/reflect-cpp',
 		status: 'Stable',
 	},
 	{
@@ -241,8 +251,8 @@ const repos: Repo[] = [
 		description:
 		    'sqlgen is a reflection-based ORM and SQL query generator for C++-20, similar to Python\'s SQLAlchemy/SQLModel or Rust\'s Diesel.',
 		tech: ['C++', 'PostgreSQL', 'MySQL', 'sqlite', 'DuckDB'],
-		link: 'https://github.com/getml/sqlgen',
-		docs: 'https://getml.github.io/sqlgen/',
+		link: 'https://github.com/munich-data-engineering/sqlgen',
+		docs: 'https://munich-data-engineering.github.io/sqlgen/',
 		status: 'Stable',
 	},
 ];
@@ -265,7 +275,7 @@ export class App {
 
 	readonly tabNames = [
 		'Energy', 'Healthcare', 'Automotive', 'Retail',
-		'Customer Service', 'Accounting', 'Other'
+		'Customer Service', 'Data Privacy', 'Other'
 	];
 
 	getSuccessStories(tabName: string): SuccessStory[] {
@@ -284,8 +294,8 @@ export class App {
 		} else if (tabName === 'Customer Service') {
 			return customerServiceProjects;
 
-		} else if (tabName === 'Accounting') {
-			return accountingProjects;
+		} else if (tabName === 'Data Privacy') {
+			return dataPrivacyProjects;
 
 		} else if (tabName === 'Other') {
 			return otherProjects;
