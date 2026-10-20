@@ -232,8 +232,8 @@ const repos: Repo[] = [
 		description:
 		    'reflect-cpp is a C++-20/C++-26 library for fast serialisation, deserialisation and validation using reflection, similar to pydantic in Python, serde in Rust, encoding in Go or aeson in Haskell.',
 		tech: ['C++', 'JSON', 'msgpack', 'parquet', 'XML', 'Avro'],
-		link: 'https://github.com/getml/reflect-cpp',
-		docs: 'https://rfl.getml.com/',
+		link: 'https://github.com/munich-data-engineering/reflect-cpp',
+		docs: 'https://munich-data-engineering.github.io/reflect-cpp',
 		status: 'Stable',
 	},
 	{
@@ -241,8 +241,8 @@ const repos: Repo[] = [
 		description:
 		    'sqlgen is a reflection-based ORM and SQL query generator for C++-20, similar to Python\'s SQLAlchemy/SQLModel or Rust\'s Diesel.',
 		tech: ['C++', 'PostgreSQL', 'MySQL', 'sqlite', 'DuckDB'],
-		link: 'https://github.com/getml/sqlgen',
-		docs: 'https://getml.github.io/sqlgen/',
+		link: 'https://github.com/munich-data-engineering/sqlgen',
+		docs: 'https://munich-data-engineering.github.io/sqlgen/',
 		status: 'Stable',
 	},
 ];
