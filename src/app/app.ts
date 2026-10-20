@@ -181,20 +181,33 @@ const customerServiceProjects: SuccessStory[] = [
 	}
 ];
 
-const accountingProjects: SuccessStory[] = [
+const dataPrivacyProjects: SuccessStory[] = [
 	{
-		title: 'Digitally Enabled Audit',
+		title: 'LLM-Powered Document Anonymisation',
 		description: [
-			'Designed and developed tools and components for ETL, integration and processing to be used for auditing businesses',
-			'Established best-practice coding standards within the software development team',
-			'Significantly improved code quality and maintainability of the existing codebase',
-			'Introduced static typing, static code analysis and functional-style programming to the Python code',
-			'The developed component for extracting data from SAP is now being used for auditing businesses worldwide',
+			'Built a system to automatically redact sensitive personal information from documents',
+			'System uses LLMs and Natural Language Processing to identify sensitive personal information',
+			'The LLMs used are hosted in a GDPR-compliant manner',
+			'Resulting system allows for the upload of PDF files, often containing hundreds of pages, and reliably returns a fully redacted version',
+			'Even works for handwritten comments'
 		],
-		image: 'audit.png',
-		tech: ['Python', 'SAP S4/HANA', 'ABAP', 'Docker'],
+		image: 'redactions.png',
+		tech: [
+			'Python', 'LLM', 'OCR', 'langchain', 'RabbitMQ',
+			'Kubernetes', 'Helm'
+		],
 	},
-
+	{
+		title: 'Synthetic Document Generation',
+		description: [
+			'Generated realistic synthetic documents for training AI systems using LLMs',
+			'Addressed the scarcity of real documents containing highly sensitive and private information',
+			'Produced training data that preserves the structural and semantic properties of real documents without exposing any actual personal data',
+			'Avoids running afoul of data protection laws while still enabling effective AI model training'
+		],
+		image: 'document_generation.png',
+		tech: ['Python', 'LLM', 'langchain', 'Docker'],
+	},
 ];
 
 const otherProjects: SuccessStory[] = [
@@ -210,19 +223,16 @@ const otherProjects: SuccessStory[] = [
 		tech: ['Python', 'Machine Learning', 'PostgreSQL'],
 	},
 	{
-		title: 'LLM-Powered Document Anonymisation',
+		title: 'Digitally Enabled Audit',
 		description: [
-			'Built a system to automatically redact sensitive personal information from documents',
-			'System uses LLMs and Natural Language Processing to identify sensitive personal information',
-			'The LLMs used are hosted in a GDPR-compliant manner',
-			'Resulting system allows for the upload of PDF files, often containing hundreds of pages, and reliably returns a fully redacted version',
-			'Even works for handwritten comments'
+			'Designed and developed tools and components for ETL, integration and processing to be used for auditing businesses',
+			'Established best-practice coding standards within the software development team',
+			'Significantly improved code quality and maintainability of the existing codebase',
+			'Introduced static typing, static code analysis and functional-style programming to the Python code',
+			'The developed component for extracting data from SAP is now being used for auditing businesses worldwide',
 		],
-		image: 'redactions.png',
-		tech: [
-			'Python', 'LLM', 'OCR', 'langchain', 'RabbitMQ',
-			'Kubernetes', 'Helm'
-		],
+		image: 'audit.png',
+		tech: ['Python', 'SAP S4/HANA', 'ABAP', 'Docker'],
 	},
 ];
 
@@ -265,7 +275,7 @@ export class App {
 
 	readonly tabNames = [
 		'Energy', 'Healthcare', 'Automotive', 'Retail',
-		'Customer Service', 'Accounting', 'Other'
+		'Customer Service', 'Data Privacy', 'Other'
 	];
 
 	getSuccessStories(tabName: string): SuccessStory[] {
@@ -284,8 +294,8 @@ export class App {
 		} else if (tabName === 'Customer Service') {
 			return customerServiceProjects;
 
-		} else if (tabName === 'Accounting') {
-			return accountingProjects;
+		} else if (tabName === 'Data Privacy') {
+			return dataPrivacyProjects;
 
 		} else if (tabName === 'Other') {
 			return otherProjects;
