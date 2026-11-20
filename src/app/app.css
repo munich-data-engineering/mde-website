@@ -19,7 +19,7 @@
 .hero-text-card {
   flex: 1;
   min-height: 200px;
-  background: var(--mat-sys-surfaceContainerHigh);
+  background: var(--mat-sys-cardSurface);
   border-radius: 28px;
   display: flex;
   align-items: center;
@@ -185,7 +185,7 @@
 }
 
 .competency-card {
-  background: var(--mat-sys-surfaceContainerHigh);
+  background: var(--mat-sys-cardSurface);
   border-radius: 20px;
   padding: 40px 28px;
   text-align: center;
@@ -194,7 +194,7 @@
 }
 
 .competency-card:hover {
-  filter: brightness(1.08);
+  filter: brightness(0.9);
 }
 
 .competency-icon {
@@ -309,7 +309,7 @@
 }
 
 .project-card {
-  background: var(--mat-sys-surfaceContainerHigh) !important;
+  background: var(--mat-sys-cardSurface) !important;
   border-radius: 16px !important;
   overflow: hidden;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -317,7 +317,7 @@
 }
 
 .project-card:hover {
-  filter: brightness(1.08);
+  filter: brightness(0.9);
 }
 
 .project-card-content {
@@ -438,7 +438,7 @@
 }
 
 .success-story-card {
-  background: var(--mat-sys-surfaceContainerHigh) !important;
+  background: var(--mat-sys-cardSurface) !important;
   border-radius: 16px !important;
   overflow: hidden;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -446,7 +446,7 @@
 }
 
 .success-story-card:hover {
-  filter: brightness(1.08);
+  filter: brightness(0.9);
 }
 
 .success-story-card-content {
@@ -502,7 +502,7 @@
 }
 
 .quality-card {
-  background: var(--mat-sys-surfaceContainerHigh) !important;
+  background: var(--mat-sys-cardSurface) !important;
   border-radius: 16px !important;
   overflow: hidden;
   border: none !important;
@@ -561,7 +561,7 @@
 }
 
 .repo-card {
-  background: var(--mat-sys-surfaceContainerHigh) !important;
+  background: var(--mat-sys-cardSurface) !important;
   border-radius: 16px !important;
   overflow: hidden;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -570,7 +570,7 @@
 }
 
 .repo-card:hover {
-  filter: brightness(1.08);
+  filter: brightness(0.9);
 }
 
 .repo-card-content {
@@ -761,7 +761,7 @@
 }
 
 .person-card {
-  background: var(--mat-sys-surfaceContainerHigh) !important;
+  background: var(--mat-sys-cardSurface) !important;
   border-radius: 16px !important;
   overflow: hidden;
   border: none !important;
