@@ -244,7 +244,7 @@
 }
 
 .mde-tabs .mat-mdc-tab-list {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--mat-sys-outline-variant, rgba(255, 255, 255, 0.08));
 }
 
 .mde-tabs .tab-label{
@@ -417,7 +417,7 @@
 .tech-badge-outline {
   background: transparent;
   color: var(--mat-sys-onSurfaceVariant);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--mat-sys-outline-variant, rgba(255, 255, 255, 0.1));
   font-family: 'Google Sans', sans-serif !important;
 }
 
@@ -699,7 +699,7 @@
   width: 100%;
   padding: 16px 20px;
   background: var(--mat-sys-surfaceContainerHigh);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--mat-sys-outline-variant, rgba(255, 255, 255, 0.08));
   border-radius: 12px;
   font-size: 16px;
   color: var(--mat-sys-onSurface);
@@ -914,6 +914,47 @@
   margin: 0;
 }
 
+/* ==============================
+   Theme Toggle
+   ============================== */
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mat-sys-surfaceContainerHigh);
+  color: var(--mat-sys-onSurface);
+  border: 1px solid var(--mat-sys-outline-variant, rgba(0, 0, 0, 0.1));
+  box-shadow: var(--mat-sys-level1);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--mat-sys-surfaceContainer);
+}
+
+.theme-toggle mat-icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 600px) {
+  .theme-toggle {
+    top: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+  }
+}
 /* ==============================
    Responsive
    ============================== */

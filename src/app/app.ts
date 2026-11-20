@@ -1,4 +1,5 @@
-import {Component, signal} from '@angular/core';
+import {AfterViewInit, Component, DOCUMENT, inject, PLATFORM_ID, signal} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
@@ -266,10 +267,47 @@ const repos: Repo[] = [
 	templateUrl: './app.html',
 	styleUrl: './app.css',
 })
-export class App {
+export class App implements AfterViewInit {
 	readonly title = signal('Munich Data Engineering');
 
 	activeTab = signal(0);
+
+	theme = signal<'light' | 'dark'>('light');
+
+	private readonly document = inject(DOCUMENT);
+	private readonly platformId = inject(PLATFORM_ID);
+
+	ngAfterViewInit() {
+		if (!isPlatformBrowser(this.platformId)) {
+			return;
+		}
+		try {
+			const stored = window.localStorage.getItem('theme');
+			if (stored === 'dark' || stored === 'light') {
+				this.setTheme(stored);
+				return;
+			}
+		} catch (e) {}
+		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			this.setTheme('dark');
+		}
+	}
+
+	toggleTheme() {
+		if (!isPlatformBrowser(this.platformId)) {
+			return;
+		}
+		const next = this.theme() === 'dark' ? 'light' : 'dark';
+		this.setTheme(next);
+		try {
+			window.localStorage.setItem('theme', next);
+		} catch (e) {}
+	}
+
+	private setTheme(value: 'light' | 'dark') {
+		this.document.documentElement.setAttribute('data-theme', value);
+		this.theme.update(() => value);
+	}
 
 	readonly repos: Repo[] = repos;
 

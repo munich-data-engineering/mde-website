@@ -12,22 +12,21 @@ html {
   ));
 }
 
-// Explicit M3 dark theme text emphasis colors
-// Both camelCase (Angular Material convention) and kebab-case (fallback) forms
-html {
-  --mat-sys-onSurface: #e6e1e5;
-  --mat-sys-onSurfaceVariant: #cac4d0;
-  --mat-sys-onSurfaceMedium: #85808a;
-  --mat-sys-on-surface: #e6e1e5;
-  --mat-sys-on-surface-variant: #cac4d0;
-  --mat-sys-on-surface-medium: #85808a;
-  --mat-tab-inactive-label-text-color: #cac4d0;
-  --mat-tab-active-label-text-color: #ff8c3e;
-  --mat-tab-header-inactive-label-color: #cac4d0;
-  --mat-tab-header-active-label-color: #ff8c3e;
-}
+// ============================================================================
+// Light theme (default, and the fallback when no theme is chosen)
+// Surface palette based on the Material 3 light elevation scale:
+//   surface (background)     #FEFBFF
+//   onSurface (text)         #1C1B1D
+//   elevation 1 (surfaceLow) #F2ECF4
+// ============================================================================
+html,
+html[data-theme="light"] {
+  // Text
+  --mat-sys-onSurface: #1C1B1D;
+  --mat-sys-onSurfaceVariant: #494A4F;
+  --mat-sys-onSurfaceMedium: #75767A;
 
-html {
+  // Brand / functional
   --mat-sys-primary: #ff8c3e;
   --mat-sys-onPrimary: #000000;
   --mat-sys-primaryContainer: #ffb57e;
@@ -36,10 +35,55 @@ html {
   --mat-sys-onSecondary: #ffffff;
   --mat-sys-tertiary: #ffcc77;
   --mat-sys-onTertiary: #000000;
+
+  // Surface scale (M3 light elevation)
+  --mat-sys-surface: #FEFBFF;
+  --mat-sys-surfaceDim: #DED9DE;
+  --mat-sys-surfaceBright: #FEFBFF;
+  --mat-sys-surfaceContainerLowest: #FFFFFF;
+  --mat-sys-surfaceContainerLow: #F2ECF4;
+  --mat-sys-surfaceContainer: #ECE7EC;
+  --mat-sys-surfaceContainerHigh: #E7E1EA;
+  --mat-sys-surfaceContainerHighest: #E1DCE5;
+
+  // Inverse
+  --mat-sys-inverseSurface: #1C1B1D;
+  --mat-sys-inverseOnSurface: #F5F2F7;
+
+  // Elevation tokens (used as card shadows)
+  --mat-sys-level1: #F2ECF4;
+
+  // Outlines
+  --mat-sys-outline: #938F99;
+  --mat-sys-outline-variant: #CBC4CE;
+
+  // Tab labels
+  --mat-tab-inactive-label-text-color: #494A4F;
+  --mat-tab-active-label-text-color: #ff8c3e;
+  --mat-tab-header-inactive-label-color: #494A4F;
+  --mat-tab-header-active-label-color: #ff8c3e;
 }
 
-// M3 dark theme surface override - lighter surfaces like m3.material.io
-html {
+// ============================================================================
+// Dark theme (explicit override; wins over the system preference)
+// ============================================================================
+html[data-theme="dark"] {
+  // Text
+  --mat-sys-onSurface: #e6e1e5;
+  --mat-sys-onSurfaceVariant: #cac4d0;
+  --mat-sys-onSurfaceMedium: #85808a;
+
+  // Brand / functional
+  --mat-sys-primary: #ff8c3e;
+  --mat-sys-onPrimary: #000000;
+  --mat-sys-primaryContainer: #ffb57e;
+  --mat-sys-onPrimaryContainer: #2e1200;
+  --mat-sys-secondary: #ff6f6f;
+  --mat-sys-onSecondary: #ffffff;
+  --mat-sys-tertiary: #ffcc77;
+  --mat-sys-onTertiary: #000000;
+
+  // Surface scale
   --mat-sys-surface: #141314;
   --mat-sys-surfaceDim: #000000;
   --mat-sys-surfaceBright: #393939;
@@ -49,6 +93,65 @@ html {
   --mat-sys-surfaceContainerHigh: #1e1e1e;
   --mat-sys-surfaceContainerHighest: #282828;
   --mat-sys-inverseSurface: #333333;
+  --mat-sys-inverseOnSurface: #F4F1F4;
+
+  // Elevation tokens (used as card shadows)
+  --mat-sys-level1: #211f22;
+
+  // Outlines
+  --mat-sys-outline: #75747e;
+  --mat-sys-outline-variant: #49454f;
+
+  // Tab labels
+  --mat-tab-inactive-label-text-color: #cac4d0;
+  --mat-tab-active-label-text-color: #ff8c3e;
+  --mat-tab-header-inactive-label-color: #cac4d0;
+  --mat-tab-header-active-label-color: #ff8c3e;
+}
+
+// When no theme has been explicitly chosen, follow the system preference.
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    // Text
+    --mat-sys-onSurface: #e6e1e5;
+    --mat-sys-onSurfaceVariant: #cac4d0;
+    --mat-sys-onSurfaceMedium: #85808a;
+
+    // Brand / functional
+    --mat-sys-primary: #ff8c3e;
+    --mat-sys-onPrimary: #000000;
+    --mat-sys-primaryContainer: #ffb57e;
+    --mat-sys-onPrimaryContainer: #2e1200;
+    --mat-sys-secondary: #ff6f6f;
+    --mat-sys-onSecondary: #ffffff;
+    --mat-sys-tertiary: #ffcc77;
+    --mat-sys-onTertiary: #000000;
+
+    // Surface scale
+    --mat-sys-surface: #141314;
+    --mat-sys-surfaceDim: #000000;
+    --mat-sys-surfaceBright: #393939;
+    --mat-sys-surfaceContainerLowest: #000000;
+    --mat-sys-surfaceContainerLow: #0a0a0a;
+    --mat-sys-surfaceContainer: #121212;
+    --mat-sys-surfaceContainerHigh: #1e1e1e;
+    --mat-sys-surfaceContainerHighest: #282828;
+    --mat-sys-inverseSurface: #333333;
+    --mat-sys-inverseOnSurface: #F4F1F4;
+
+    // Elevation tokens (used as card shadows)
+    --mat-sys-level1: #211f22;
+
+    // Outlines
+    --mat-sys-outline: #75747e;
+    --mat-sys-outline-variant: #49454f;
+
+    // Tab labels
+    --mat-tab-inactive-label-text-color: #cac4d0;
+    --mat-tab-active-label-text-color: #ff8c3e;
+    --mat-tab-header-inactive-label-color: #cac4d0;
+    --mat-tab-header-active-label-color: #ff8c3e;
+  }
 }
 
 body {

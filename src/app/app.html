@@ -1,4 +1,10 @@
 <!-- Hero Section -->
+<button class="theme-toggle"
+  (click)="toggleTheme()"
+  [attr.aria-label]="theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+  [attr.aria-pressed]="theme() === 'dark'">
+  <mat-icon>{{ theme() === 'dark' ? 'light_mode' : 'dark_mode' }}</mat-icon>
+</button>
 <section class="hero">
   <div class="hero-grid">
     <!-- Left card: text -->
