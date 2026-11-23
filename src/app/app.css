@@ -915,6 +915,52 @@
 }
 
 /* ==============================
+   Language Switcher
+   ============================== */
+
+.lang-switcher {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(38, 38, 38, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.lang-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--mat-sys-onSurfaceMedium);
+  font-family: 'Google Sans', sans-serif !important;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lang-btn:hover {
+  color: #ffffff;
+}
+
+.lang-btn.lang-active {
+  background: #ff8c3e;
+  color: #1c1c1c;
+}
+
+.lang-btn.lang-active {
+  box-shadow: 0 2px 8px rgba(255, 140, 62, 0.4);
+}
+
+/* ==============================
    Responsive
    ============================== */
 
