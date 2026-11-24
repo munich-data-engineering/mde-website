@@ -27,7 +27,7 @@ export const translationsDe:
 	    'quality.sectionDesc':
 		'Codequalität ist ein großes Problem in vielen IT-Projekten – wir können helfen.',
 	    'quality.card1':
-		'Fällt das Hinzufügen neuer Features schwer? <br> Ist Ihr Code für andere schwer verständlich? <br> Dauert das Onboarding neuer Teammitglieder zu lange? <br> Beinhaltet das Kompilieren Ihrer Software viele manuelle Schritte?<br><br> Wenn ja, haben Sie möglicherweise Probleme mit der Codequalität.',
+		'Fällt das Hinzufügen neuer Features umständlich? <br> Ist Ihr Code für andere schwer verständlich? <br> Dauert das Onboarding neuer Teammitglieder zu lange? <br> Beinhaltet das Kompilieren Ihrer Software viele manuelle Schritte?<br><br> Wenn ja, haben Sie möglicherweise Probleme mit der Codequalität.',
 	    'quality.card2':
 		'Modernes Softwareengineering muss auf theoretischen Grundlagen wie Kategorietheorie und Typtheorie basieren.<br><br> Software-Patterns müssen durch großangelegte empirische Analysen validiert werden.<br><br> Automatisiertes Testing ermöglicht die kontinuierliche Auslieferung zuverlässiger Software.',
 
