@@ -36,6 +36,10 @@ export const translationsDe:
 		'Viele sagen, dass sie guten Code schreiben – wir beweisen es. Entdecken Sie unsere erfolgreichen Open-Source-Projekte.',
 	    'opensource.repo': 'Repository',
 	    'opensource.docs': 'Dokumentation',
+	    'opensource.reflectCpp.description':
+		'reflect-cpp ist eine C++-20/C++-26-Bibliothek für schnelle Serialisierung, Deserialisierung und Validierung mittels Reflexion, ähnlich wie pydantic in Python, serde in Rust, encoding in Go oder aeson in Haskell.',
+	    'opensource.sqlgen.description':
+		'sqlgen ist ein reflexionsbasiertes ORM und SQL-Query-Generator für C++-20, ähnlich wie SQLAlchemy/SQLModel in Python oder Diesel in Rust.',
 
 	    // Projects (success stories)
 	    'projects.sectionDesc':
@@ -114,8 +118,7 @@ export const translationsDe:
 		'Das System wird zur Verbesserung der Kapazitätsplanung eingesetzt',
 	    'healthcare.hospitalRp.title':
 		'Prognose von erneuter Einweisung in Krankenhäusern',
-	    'healthcare.hospitalRp.line0':
-		'Analyse von Patientendaten zur Vorhersage der Wahrscheinlichkeit einer erneuten Einweisung aufgrund einer chronischen Krankheit',
+	    'healthcare.hospitalRp.line0': 'Analyse von Patientendaten zur Vorhersage der Wahrscheinlichkeit einer erneuten Einweisung aufgrund einer chronischen Krankheit',
 	    'healthcare.hospitalRp.line1':
 		'Das entstehende System erzeugt bessere Vorhersagen als das bestehende Benchmark-System',
 	    'healthcare.hospitalRp.line2':

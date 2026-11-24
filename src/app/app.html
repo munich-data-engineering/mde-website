@@ -114,7 +114,7 @@
             {{ 'status.' + repo.status | translate }}
           </span>
         </div>
-        <p class="repo-desc">{{ repo.description }}</p>
+        <p class="repo-desc">{{ repo.descKey | translate }}</p>
         <div class="repo-tech">
           @for (tech of repo.tech; track tech) {
           <span class="tech-badge tech-badge-outline">{{ tech }}</span>

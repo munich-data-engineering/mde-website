@@ -11,7 +11,7 @@ import {TranslationService} from '../i18n/translation.service';
 
 interface Repo {
 	name: string;
-	description: string;
+	descKey: string;
 	tech: string[];
 	link: string;
 	docs?: string;
@@ -258,8 +258,7 @@ const otherProjects: SuccessStory[] = [
 const repos: Repo[] = [
 	{
 		name: 'reflect-cpp',
-		description:
-		    'reflect-cpp is a C++-20/C++-26 library for fast serialisation, deserialisation and validation using reflection, similar to pydantic in Python, serde in Rust, encoding in Go or aeson in Haskell.',
+		descKey: 'opensource.reflectCpp.description',
 		tech: ['C++', 'JSON', 'msgpack', 'parquet', 'XML', 'Avro'],
 		link: 'https://github.com/munich-data-engineering/reflect-cpp',
 		docs: 'https://munich-data-engineering.github.io/reflect-cpp',
@@ -267,8 +266,7 @@ const repos: Repo[] = [
 	},
 	{
 		name: 'sqlgen',
-		description:
-		    'sqlgen is a reflection-based ORM and SQL query generator for C++-20, similar to Python\'s SQLAlchemy/SQLModel or Rust\'s Diesel.',
+		descKey: 'opensource.sqlgen.description',
 		tech: ['C++', 'PostgreSQL', 'MySQL', 'sqlite', 'DuckDB'],
 		link: 'https://github.com/munich-data-engineering/sqlgen',
 		docs: 'https://munich-data-engineering.github.io/sqlgen/',

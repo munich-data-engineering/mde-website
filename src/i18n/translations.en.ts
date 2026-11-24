@@ -36,6 +36,10 @@ export const translationsEn:
 		'Many say they write good code — we prove it. Explore our successful open-source projects.',
 	    'opensource.repo': 'Repository',
 	    'opensource.docs': 'Documentation',
+	    'opensource.reflectCpp.description':
+		'reflect-cpp is a C++-20/C++-26 library for fast serialisation, deserialisation and validation using reflection, similar to pydantic in Python, serde in Rust, encoding in Go or aeson in Haskell.',
+	    'opensource.sqlgen.description':
+		'sqlgen is a reflection-based ORM and SQL query generator for C++-20, similar to Python\'s SQLAlchemy/SQLModel or Rust\'s Diesel.',
 
 	    // Projects (success stories)
 	    'projects.sectionDesc':
