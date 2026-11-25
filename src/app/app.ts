@@ -5,10 +5,13 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import {RouterOutlet} from '@angular/router';
+import {TranslatePipe} from '../i18n/translate.pipe';
+import {Language} from '../i18n/translations';
+import {TranslationService} from '../i18n/translation.service';
 
 interface Repo {
 	name: string;
-	description: string;
+	descKey: string;
 	tech: string[];
 	link: string;
 	docs?: string;
@@ -16,6 +19,7 @@ interface Repo {
 }
 
 interface SuccessStory {
+	key: string;
 	title: string;
 	description: string[];
 	image: string;
@@ -24,6 +28,7 @@ interface SuccessStory {
 
 const energyProjects: SuccessStory[] = [
 	{
+		key: 'energy.gasMarket',
 		title: 'Gas Market Model',
 		description: [
 			'Project was commissioned in the wake of the war in Ukraine',
@@ -38,6 +43,7 @@ const energyProjects: SuccessStory[] = [
 		],
 	},
 	{
+		key: 'energy.electricityPrice',
 		title: 'Electricity Price Prediction',
 		description: [
 			'Introduced static typing, static code analysis, automated unit tests and functional-style programming to the Python code',
@@ -55,6 +61,7 @@ const energyProjects: SuccessStory[] = [
 
 const healthcareProjects: SuccessStory[] = [
 	{
+		key: 'healthcare.llmBilling',
 		title: 'LLM-Enabled Medical Billing',
 		description: [
 			'Built a system to automatically write medical bills',
@@ -68,6 +75,7 @@ const healthcareProjects: SuccessStory[] = [
 		],
 	},
 	{
+		key: 'healthcare.readmission',
 		title: 'Readmission Risk Reduction',
 		description: [
 			'Developed a system for predicting the expected duration of each patient\'s stay in hospital',
@@ -78,6 +86,7 @@ const healthcareProjects: SuccessStory[] = [
 		tech: ['Python', 'Machine Learning', 'PostgreSQL'],
 	},
 	{
+		key: 'healthcare.hospitalRp',
 		title: 'Hospital Resource Planning',
 		description: [
 			'Analysed patient data to predict the probability of a patient being rehospitalised due to chronic illness',
@@ -91,6 +100,7 @@ const healthcareProjects: SuccessStory[] = [
 
 const automotiveProjects: SuccessStory[] = [
 	{
+		key: 'automotive.churnEu',
 		title: 'Customer Churn in a Large European Market',
 		description: [
 			'Predicted customer loyalty across sales and aftersales for every single customer in one of Europe\'s largest markets',
@@ -105,6 +115,7 @@ const automotiveProjects: SuccessStory[] = [
 		],
 	},
 	{
+		key: 'automotive.churnNonEu',
 		title: 'Customer Churn in a Large Non-European Market',
 		description: [
 			'Developed a prediction system for customer loyalty in aftersales for every single customer in a large non-European country',
@@ -122,6 +133,7 @@ const automotiveProjects: SuccessStory[] = [
 
 const retailProjects: SuccessStory[] = [
 	{
+		key: 'retail.returnPrediction',
 		title: 'Product Return Prediction in Online Retail',
 		description: [
 			'Developed a system for predicting product returns for online retailers',
@@ -138,6 +150,7 @@ const retailProjects: SuccessStory[] = [
 		],
 	},
 	{
+		key: 'retail.salesPrediction',
 		title: 'Sales Prediction',
 		description: [
 			'Developed a system for sales prediction to optimise global warehousing and logistics',
@@ -156,6 +169,7 @@ const retailProjects: SuccessStory[] = [
 
 const customerServiceProjects: SuccessStory[] = [
 	{
+		key: 'customerService.reactivation',
 		title: 'Customer Reactivation',
 		description: [
 			'Developed a prediction system for customer reactivation of a German state-owned lottery using machine learning',
@@ -168,6 +182,7 @@ const customerServiceProjects: SuccessStory[] = [
 		],
 	},
 	{
+		key: 'customerService.tenantChurn',
 		title: 'Tenant Churn Prediction in Real Estate',
 		description: [
 			'Developed a prediction system for tenants cancelling their contracts',
@@ -183,6 +198,7 @@ const customerServiceProjects: SuccessStory[] = [
 
 const dataPrivacyProjects: SuccessStory[] = [
 	{
+		key: 'dataPrivacy.anonymisation',
 		title: 'LLM-Powered Document Anonymisation',
 		description: [
 			'Built a system to automatically redact sensitive personal information from documents',
@@ -198,6 +214,7 @@ const dataPrivacyProjects: SuccessStory[] = [
 		],
 	},
 	{
+		key: 'dataPrivacy.synthetic',
 		title: 'Synthetic Document Generation',
 		description: [
 			'Generated realistic synthetic documents for training AI systems using LLMs',
@@ -212,6 +229,7 @@ const dataPrivacyProjects: SuccessStory[] = [
 
 const otherProjects: SuccessStory[] = [
 	{
+		key: 'other.predictiveMaintenance',
 		title: 'Predictive Maintenance',
 		description: [
 			'Developed a predictive maintenance system based on sensor data collected from production machinery for optical components deployed worldwide (~300 GB)',
@@ -223,6 +241,7 @@ const otherProjects: SuccessStory[] = [
 		tech: ['Python', 'Machine Learning', 'PostgreSQL'],
 	},
 	{
+		key: 'other.audit',
 		title: 'Digitally Enabled Audit',
 		description: [
 			'Designed and developed tools and components for ETL, integration and processing to be used for auditing businesses',
@@ -239,8 +258,7 @@ const otherProjects: SuccessStory[] = [
 const repos: Repo[] = [
 	{
 		name: 'reflect-cpp',
-		description:
-		    'reflect-cpp is a C++-20/C++-26 library for fast serialisation, deserialisation and validation using reflection, similar to pydantic in Python, serde in Rust, encoding in Go or aeson in Haskell.',
+		descKey: 'opensource.reflectCpp.description',
 		tech: ['C++', 'JSON', 'msgpack', 'parquet', 'XML', 'Avro'],
 		link: 'https://github.com/munich-data-engineering/reflect-cpp',
 		docs: 'https://munich-data-engineering.github.io/reflect-cpp',
@@ -248,8 +266,7 @@ const repos: Repo[] = [
 	},
 	{
 		name: 'sqlgen',
-		description:
-		    'sqlgen is a reflection-based ORM and SQL query generator for C++-20, similar to Python\'s SQLAlchemy/SQLModel or Rust\'s Diesel.',
+		descKey: 'opensource.sqlgen.description',
 		tech: ['C++', 'PostgreSQL', 'MySQL', 'sqlite', 'DuckDB'],
 		link: 'https://github.com/munich-data-engineering/sqlgen',
 		docs: 'https://munich-data-engineering.github.io/sqlgen/',
@@ -261,7 +278,7 @@ const repos: Repo[] = [
 	selector: 'app-root',
 	imports: [
 		RouterOutlet, MatTabsModule, MatCardModule, MatButtonModule,
-		MatIconModule, FormsModule
+		MatIconModule, FormsModule, TranslatePipe
 	],
 	templateUrl: './app.html',
 	styleUrl: './app.css',
@@ -273,33 +290,32 @@ export class App {
 
 	readonly repos: Repo[] = repos;
 
-	readonly tabNames = [
-		'Energy', 'Healthcare', 'Automotive', 'Retail',
-		'Customer Service', 'Data Privacy', 'Other'
+	readonly tabKeys = [
+		'tabs.energy', 'tabs.healthcare', 'tabs.automotive', 'tabs.retail',
+		'tabs.customerService', 'tabs.dataPrivacy', 'tabs.other'
 	];
 
-	getSuccessStories(tabName: string): SuccessStory[] {
-		if (tabName === 'Energy') {
-			return energyProjects;
+	readonly tabs: Record<string, SuccessStory[]> = {
+		'tabs.energy': energyProjects,
+		'tabs.healthcare': healthcareProjects,
+		'tabs.automotive': automotiveProjects,
+		'tabs.retail': retailProjects,
+		'tabs.customerService': customerServiceProjects,
+		'tabs.dataPrivacy': dataPrivacyProjects,
+		'tabs.other': otherProjects,
+	};
 
-		} else if (tabName === 'Healthcare') {
-			return healthcareProjects;
+	successStoriesForKey(tabKey: string): SuccessStory[] {
+		return this.tabs[tabKey] ?? [];
+	}
 
-		} else if (tabName === 'Automotive') {
-			return automotiveProjects;
+	constructor(private readonly translationService: TranslationService) {}
 
-		} else if (tabName === 'Retail') {
-			return retailProjects;
+	switchToLanguage(language: Language): void {
+		this.translationService.switchToLanguage(language);
+	}
 
-		} else if (tabName === 'Customer Service') {
-			return customerServiceProjects;
-
-		} else if (tabName === 'Data Privacy') {
-			return dataPrivacyProjects;
-
-		} else if (tabName === 'Other') {
-			return otherProjects;
-		}
-		return [];
+	get language(): Language {
+		return this.translationService.language;
 	}
 }

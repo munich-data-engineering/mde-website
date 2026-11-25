@@ -1,3 +1,13 @@
+<!-- Language Switcher -->
+<div class="lang-switcher">
+  <button type="button" class="lang-btn" [class.lang-active]="language === 'en'" (click)="switchToLanguage('en')">
+    {{ 'lang.en' | translate }}
+  </button>
+  <button type="button" class="lang-btn" [class.lang-active]="language === 'de'" (click)="switchToLanguage('de')">
+    {{ 'lang.de' | translate }}
+  </button>
+</div>
+
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-grid">
@@ -6,10 +16,10 @@
       <div class="hero-content">
         <p class="hero-title">{{ title() }}</p>
         <div class="hero-subtitle">
-          We build data-driven software.
+          {{ 'hero.subtitle' | translate }}
         </div>
         <div class="hero-actions">
-          <a href="#projects" class="hero-btn hero-btn-primary">Learn more</a>
+          <a href="#projects" class="hero-btn hero-btn-primary">{{ 'hero.learnMore' | translate }}</a>
         </div>
       </div>
     </div>
@@ -25,27 +35,25 @@
 <!-- Core Competencies Section -->
 <section class="competencies-section">
   <div class="competencies-content">
-    <p class="competencies-intro">We combine software engineering, machine learning and cloud computing to build fast,
-      reliable and maintainable machine learning pipelines and data-driven software.</p>
+    <p class="competencies-intro">{{ 'competencies.intro' | translate }}</p>
 
     <div class="competencies-grid">
       <div class="competency-card mdc-elevation-1">
         <mat-icon class="competency-icon">code</mat-icon>
-        <h3 class="competency-title">Software Engineering</h3>
-        <p class="competency-desc">We adhere to industry best practices, including
-          scientific principles and CI/CD workflows.</p>
+        <h3 class="competency-title">{{ 'competencies.software.title' | translate }}</h3>
+        <p class="competency-desc">{{ 'competencies.software.desc' | translate }}</p>
       </div>
 
       <div class="competency-card mdc-elevation-1">
         <mat-icon class="competency-icon">psychology</mat-icon>
-        <h3 class="competency-title">Machine Learning</h3>
-        <p class="competency-desc">From predictive models to intelligent automation using LLMs, we design and deploy ML systems that scale.</p>
+        <h3 class="competency-title">{{ 'competencies.ml.title' | translate }}</h3>
+        <p class="competency-desc">{{ 'competencies.ml.desc' | translate }}</p>
       </div>
 
       <div class="competency-card mdc-elevation-1">
         <mat-icon class="competency-icon">cloud</mat-icon>
-        <h3 class="competency-title">Cloud Computing</h3>
-        <p class="competency-desc">We build resilient, cloud-native infrastructure and data pipelines on AWS, GCP, Azure, and Kubernetes.</p>
+        <h3 class="competency-title">{{ 'competencies.cloud.title' | translate }}</h3>
+        <p class="competency-desc">{{ 'competencies.cloud.desc' | translate }}</p>
       </div>
     </div>
   </div>
@@ -54,7 +62,7 @@
 <!-- Code Quality Section -->
 <section class="quality-section">
   <div class="section-header">
-    <p class="section-desc">Code quality is a major challenge in many IT projects – we can help.</p>
+    <p class="section-desc">{{ 'quality.sectionDesc' | translate }}</p>
   </div>
   <div class="quality-grid">
     <!-- Left card: image -->
@@ -67,25 +75,14 @@
     <!-- Right card: text -->
     <mat-card class="quality-card mdc-elevation-1">
       <mat-card-content class="quality-card-content">
-        <p class="quality-card-desc">
-          Is adding new features challenging? <br>
-          Is your codebase difficult for others to understand? <br>
-          Does onboarding new team members take long? <br>
-          Does building your software involve many manual steps?
-          <br><br> If
-          so, you may be facing issues with code quality.
-        </p>
+        <p class="quality-card-desc" [innerHTML]="'quality.card1' | translate"></p>
       </mat-card-content>
     </mat-card>
 
     <!-- Left card: text -->
     <mat-card class="quality-card mdc-elevation-1">
       <mat-card-content class="quality-card-content">
-        <p class="quality-card-desc">
-          Software engineering needs to be grounded in theoretical frameworks, like Category Theory and Type Theory.<br><br>
-	  Software patterns need to be validated through large-scale empirical analysis.<br><br>
-          Automated testing enables continuous delivery of reliable code.
-        </p>
+        <p class="quality-card-desc" [innerHTML]="'quality.card2' | translate"></p>
       </mat-card-content>
     </mat-card>
 
@@ -102,8 +99,7 @@
 <!-- Open Source Section -->
 <section class="opensource-section" id="open-source">
   <div class="section-header">
-    <p class="section-desc">Many say they write good code — we prove it. Explore our successful open-source
-      projects.</p>
+    <p class="section-desc">{{ 'opensource.sectionDesc' | translate }}</p>
   </div>
 
   <div class="opensource-grid">
@@ -115,10 +111,10 @@
           <span class="repo-name">{{ repo.name }}</span>
           <span class="repo-status"
             [class]="repo.status === 'Active' ? 'status-active' : (repo.status === 'Stable' ? 'status-done' : 'status-beta')">
-            {{ repo.status }}
+            {{ 'status.' + repo.status | translate }}
           </span>
         </div>
-        <p class="repo-desc">{{ repo.description }}</p>
+        <p class="repo-desc">{{ repo.descKey | translate }}</p>
         <div class="repo-tech">
           @for (tech of repo.tech; track tech) {
           <span class="tech-badge tech-badge-outline">{{ tech }}</span>
@@ -127,12 +123,12 @@
         <div class="repo-actions">
           <a [href]="repo.link" target="_blank" rel="noopener" class="repo-link">
             <mat-icon>open_in_new</mat-icon>
-            Repository
+            {{ 'opensource.repo' | translate }}
           </a>
           @if (repo.docs) {
           <a [href]="repo.docs" target="_blank" rel="noopener" class="repo-link">
             <mat-icon>menu_book</mat-icon>
-            Documentation
+            {{ 'opensource.docs' | translate }}
           </a>
           }
         </div>
@@ -145,23 +141,25 @@
 <!-- Tabbed Projects Section -->
 <section class="projects-section" id="projects">
   <div class="section-header">
-    <p class="section-desc">Here are some of our past success stories across a wide variety of industries:</p>
+    <p class="section-desc">{{ 'projects.sectionDesc' | translate }}</p>
   </div>
 
   <mat-tab-group class="mde-tabs" animationDuration="200ms" [(selectedIndex)]="activeTab">
-    @for (tab of tabNames; track tab) {
+    @for (tab of tabKeys; track tab) {
     <mat-tab>
-      <ng-template mat-tab-label><div class="tab-label">{{ tab }}</div></ng-template>
+      <ng-template mat-tab-label><div class="tab-label">{{ tab | translate }}</div></ng-template>
       <div class="tab-content">
         <div
-          [class]="getSuccessStories(tab).length === 3? 'success-story-grid-three-cards': 'success-story-grid-two-cards'">
-          @for (p of getSuccessStories(tab); track p.title) {
+          [class]="successStoriesForKey(tab).length === 3? 'success-story-grid-three-cards': 'success-story-grid-two-cards'">
+          @for (p of successStoriesForKey(tab); track p.key) {
           <mat-card class="success-story-card mdc-elevation-1">
             <mat-card-content class="success-story-card-content">
-              <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="p.title" />
-              <h3 class="success-story-card-title">{{ p.title }}</h3>
+              <img class="success-story-card-img" [src]="'/img/' + p.image" [alt]="(p.key + '.title') | translate" />
+              <h3 class="success-story-card-title">{{ p.key + '.title' | translate }}</h3>
               <ul class="success-story-card-desc">
-                @for (line of p.description; track line) {<li>{{ line }}</li>}
+                @for (line of p.description; track $index) {
+                <li>{{ p.key + '.line' + $index | translate }}</li>
+                }
               </ul>
               <div class="project-tech">
                 @for (tech of p.tech; track tech) {
@@ -181,7 +179,7 @@
 <!-- People Section -->
 <section class="people-section">
   <div class="section-header">
-    <p class="section-desc">Meet the mind behind Munich Data Engineering.</p>
+    <p class="section-desc">{{ 'people.sectionDesc' | translate }}</p>
   </div>
 
   <div class="people-content">
@@ -190,21 +188,19 @@
         <div class="person-avatar">
           <img src="/img/patrick.jpg" alt="Patrick Urbanke" class="person-avatar-img" />
         </div>
-        <h3 class="person-name">Dr. Patrick Urbanke</h3>
-        <p class="person-role">Founder</p>
-        <p class="person-bio">
-          Patrick began programming before the age of 10 and brings over 25 years of programming experience, including more than 10 years leading data-driven software projects in industry. Fluent in German, English, and Mandarin Chinese, he holds a doctorate in machine learning — completed <em>summa cum laude</em> as the fastest student in his institute's history — and brings a research-driven approach to every engagement, ensuring the code we ship is not just functional, but fundamentally sound.
-        </p>
+        <h3 class="person-name">{{ 'people.name' | translate }}</h3>
+        <p class="person-role">{{ 'people.role' | translate }}</p>
+        <p class="person-bio" [innerHTML]="'people.bio' | translate"></p>
       </mat-card-content>
     </mat-card>
   </div>
 </section>
 <section class="contact-section">
   <div class="section-header">
-    <p class="section-desc">If you are interested or want to learn more, please contact us:</p>
+    <p class="section-desc">{{ 'contact.sectionDesc' | translate }}</p>
   </div>
   <div class="contact-content">
-    <a href="mailto:urbanke.patrick+munich-data-engineering@gmail.com" class="hero-btn hero-btn-primary">Send us an email</a>
+    <a href="mailto:urbanke.patrick+munich-data-engineering@gmail.com" class="hero-btn hero-btn-primary">{{ 'contact.email' | translate }}</a>
   </div>
 </section>
 
@@ -213,17 +209,15 @@
 <footer class="footer">
   <div class="footer-content">
     <div class="footer-brand">
-      <span class="footer-title">Munich Data Engineering</span>
-      <p class="footer-tagline">Software · Machine Learning · Cloud</p>
+      <span class="footer-title">{{ title() }}</span>
+      <p class="footer-tagline">{{ 'footer.tagline' | translate }}</p>
     </div>
     <div class="footer-links">
-      <a href="#projects" class="footer-link">Projects</a>
-      <a href="#open-source" class="footer-link">Open Source</a>
-      <a href="https://github.com/munich-data-engineering/" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+      <a href="#projects" class="footer-link">{{ 'footer.projects' | translate }}</a>
+      <a href="#open-source" class="footer-link">{{ 'footer.openSource' | translate }}</a>
+      <a href="https://github.com/munich-data-engineering/" target="_blank" rel="noopener" class="footer-link">{{ 'footer.github' | translate }}</a>
     </div>
-    <div class="footer-copy">
-      &copy; 2026 Urbanke Ventures UG. All rights reserved.
-    </div>
+    <div class="footer-copy" [innerHTML]="'footer.copyright' | translate"></div>
   </div>
 </footer>
 
