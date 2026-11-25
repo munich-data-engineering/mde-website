@@ -64,7 +64,7 @@ export const translationsDe:
 	    'people.name': 'Dr. Patrick Urbanke',
 	    'people.role': 'Gründer',
 	    'people.bio':
-		'Patrick begann mit rund 10 Jahren mit dem Programmieren und bringt über 25 Jahre Berufserfahrung mit, darunter mehr als 10 Jahre bei der Leitung datenbasiierter Softwareprojekte in der Industrie. Er beherrscht Deutsch, Englisch und Mandarin. Bereits seine Doktorarbeit befasste sich mit Machine Learning. Er absolvierte seine Promotion als schnellster Student in der Geschichte seines Instituts, mit der bestmöglichen Bewertung (summa cum laude). Mit einem wissenschaftsorientierten Ansatz sorgt dafür, dass der Code, den wir ausliefern, nicht nur funktioniert, sondern auch langfristig tragfähig ist.',
+		'Patrick begann mit rund 10 Jahren mit dem Programmieren und bringt über 25 Jahre Erfahrung als Entwickler mit, darunter mehr als 10 Jahre mit datengetriebenen Softwareprojekte in der Industrie. Er beherrscht Deutsch, Englisch und Mandarin. Bereits seine Doktorarbeit befasste sich mit Machine Learning. Er absolvierte seine Promotion als schnellster Student in der Geschichte seines Instituts, mit der bestmöglichen Bewertung (summa cum laude). Mit einem wissenschaftsorientierten Ansatz sorgt dafür, dass der Code, den wir ausliefern, nicht nur funktioniert, sondern auch langfristig tragfähig ist.',
 
 	    // Contact
 	    'contact.sectionDesc':
@@ -93,7 +93,7 @@ export const translationsDe:
 	    'energy.electricityPrice.line0':
 		'Einführung von statischer Typisierung, statischer Code-Analyse, automatisierten Unit-Tests und funktionalen Programmierstil in den Python-Code',
 	    'energy.electricityPrice.line1':
-		'Deutliche Verbesserung der Codequalität und Wartbarkeit des bestehenden Codebases sowie der ETL-Prozesse',
+		'Deutliche Verbesserung der Codequalität und Wartbarkeit der bestehenden Codebase sowie der ETL-Prozesse',
 	    'energy.electricityPrice.line2':
 		'Steigerung der Laufleistung um den Faktor über 20 durch das Umschreiben performancekritischer Teile in C++',
 	    'energy.electricityPrice.line3':
@@ -140,7 +140,7 @@ export const translationsDe:
 	    'automotive.churnNonEu.line0':
 		'Entwicklung eines Vorhersagesystems zur Kundenloyalität im After Sales für jeden einzelnen Kunden in einem großen nicht-europäischen Land',
 	    'automotive.churnNonEu.line1':
-		'Aufbau von ETL-Prozessen und relationaler Features',
+		'Aufbau von ETL-Prozessen und relationalen Features',
 	    'automotive.churnNonEu.line2':
 		'Das System ermöglicht den gezielten Einsatz von Ressourcen für alle After-Sales-Kampagnen in diesem großen nicht-europäischen Land',
 
@@ -217,7 +217,7 @@ export const translationsDe:
 	    'other.audit.line1':
 		'Einführung von Best-Practice-Code-Standards innerhalb des Software-Development-Teams',
 	    'other.audit.line2':
-		'Deutliche Verbesserung der Codequalität und Wartbarkeit des bestehenden Codebases',
+		'Deutliche Verbesserung der Codequalität und Wartbarkeit der bestehenden Codebase',
 	    'other.audit.line3':
 		'Einführung von statischen Typisierungen, statischer Code-Analyse und funktionalen Programmierstil in den Python-Code',
 	    'other.audit.line4':
