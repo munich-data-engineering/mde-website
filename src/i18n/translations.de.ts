@@ -7,12 +7,12 @@ export const translationsDe:
 	    'lang.de': 'Deutsch',
 
 	    // Hero
-	    'hero.subtitle': 'Wir entwickeln datenbasierte Software.',
+	    'hero.subtitle': 'Wir entwickeln datengetriebene Software.',
 	    'hero.learnMore': 'Mehr erfahren',
 
 	    // Core competencies
 	    'competencies.intro':
-		'Wir verbinden Softwareengineering, Machine Learning und Cloud Computing, um schnelle, zuverlässige und wartbare Machine-Learning-Pipelines und datenbasierte Software zu entwickeln.',
+		'Wir verbinden Softwareengineering, Machine Learning und Cloud Computing, um schnelle, zuverlässige und wartbare Machine-Learning-Pipelines und datengetriebene Software zu entwickeln.',
 	    'competencies.software.title': 'Softwareengineering',
 	    'competencies.software.desc':
 		'Wir halten uns an bewährte Best Practices, einschließlich wissenschaftlicher Prinzipien und CI/CD-Workflows.',
@@ -206,7 +206,7 @@ export const translationsDe:
 	    'other.predictiveMaintenance.line0':
 		'Entwicklung eines prädiktiven Wartungssystems auf Basis von Sensordaten der Produktionsmaschinen für optische Bauteile, die weltweit rund 300 GB Datenvolumen erzeugen',
 	    'other.predictiveMaintenance.line1':
-		'Aufbau von Merkmalen mit eigenständig entwickelten Algorithmen für automatisiertes Feature Engineering, gegen etablierte manuelle Merkmale gebenchmarkt',
+		'Aufbau von Features mit eigenständig entwickelten Algorithmen für automatisiertes Feature Engineering, gegen etablierte manuelle Features gebenchmarkt',
 	    'other.predictiveMaintenance.line2':
 		'Die entstehenden automatisierten Features erzeugen bessere Vorhersagen und können deutlich schneller erzeugt werden',
 	    'other.predictiveMaintenance.line3':
