@@ -91,7 +91,7 @@ export const translationsDe:
 		'Das System liefert zuverlässig mehrfach am Tag Vorhersagen',
 	    'energy.electricityPrice.title': 'Strompreisvorhersage',
 	    'energy.electricityPrice.line0':
-		'Einführung von statischer Typisierung, statischer Code-Analyse, automatisierten Unit-Tests und funktionalen Programmierstil in den Python-Code',
+		'Einführung von statischer Typisierung, statischer Code-Analyse, automatisierten Unit-Tests und funktionalem Programmierstil in den Python-Code',
 	    'energy.electricityPrice.line1':
 		'Deutliche Verbesserung der Codequalität und Wartbarkeit der bestehenden Codebase sowie der ETL-Prozesse',
 	    'energy.electricityPrice.line2':
